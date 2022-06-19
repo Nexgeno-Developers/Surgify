@@ -1,0 +1,108 @@
+.carousel-indicators .active {
+  background: #881543;
+}
+
+.carousel-indicators li {
+  height: 11px;
+  width: 11px;
+  border-radius: 11px;
+  background: #d6e3f3;
+  border: 0;
+  margin: 0 2px;
+}
+
+.accordion-item {
+  border: 0;
+}
+
+.accordion-body {
+  padding: 0;
+  margin-top: -32px;
+}
+
+.accordion .collapse.show .card {
+  border-radius: 0 0 18px 18px;
+  border-top: 0;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.collapse.show .card-body {
+  padding-top: 20px;
+}
+
+.p-carousel-content {
+  padding-bottom: 70px;
+}
+
+.p-carousel-container {
+  position: relative;
+}
+
+.p-ripple {
+  position: absolute !important;
+  right: 0;
+  bottom: -60px;
+}
+
+.p-carousel-prev {
+  background: #f3f8ff url(../images/arrowRight.svg) no-repeat center center !important;
+  transform: rotate(180deg);
+  right: 60px;
+}
+
+.p-carousel-next {
+  background: #f3f8ff url(../images/arrowRight.svg) no-repeat center center !important
+}
+
+.p-carousel .p-carousel-content .p-carousel-prev,
+.p-carousel .p-carousel-content .p-carousel-next {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.p-carousel .p-carousel-content .p-carousel-prev span,
+.p-carousel .p-carousel-content .p-carousel-next span {
+  display: none;
+}
+
+.welcome {
+  padding-bottom: 60px;
+}
+
+.appointment-modal.modal-dialog {
+  max-width: 800px;
+}
+
+.user-dropdown .dropdown-menu {
+  right: 0;
+}
+
+/*.primary-header{ overflow: hidden;}*/
+
+.whtarepilesImg img {
+  max-width: 300px;
+  width: 100%;
+}
+.popover-arrow{ display: none !important;}
+.popover{ border: 0; width: 400px; z-index: 999;}
+.popover-body{ padding: 0;}
+.testimonial-popover .author-desc{
+  font-size: 14px;
+  line-height: 160%;
+}
+.testimonial-circle{ z-index: 2;}
+.testimonial-circle.rounded-center{ z-index: 1;}
+
+.appointment-modal .thankApp{ min-height: 350px;  display: flex;  align-items: center;}
+
+.form-group.animation select.form-control {height: auto;  line-height: 130%;  background: url("/assets/images/arrow.svg") no-repeat center right; }
+
+@media screen and (max-width: 999px) {
+  .welcome .p-carousel-item {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popover{ width: 280px;}
+}

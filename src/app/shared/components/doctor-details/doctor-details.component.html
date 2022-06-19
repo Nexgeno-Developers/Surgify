@@ -1,0 +1,79 @@
+<div class="drDetailsTop">
+    <div class="drBgtop"></div>
+    <div class="containerMain">
+        <div class="container" *ngIf="doctor">
+            <div class="drdetMain">
+
+                <div class="drDetimg">
+                    <img
+                        [src]="(doctor?.image?.indexOf('assets') != -1)?(doctor?.image): 'assets/images/not_found/image-not-available-doctors.svg'">
+                </div>
+                <div class="drListTxt">
+
+                    <div class="drName">
+                        <strong>{{doctor?.title}} {{doctor?.name}}<img src="/assets/images/checkGreen.svg"> <a href="javascript:void(0)" class="btnBack" (click)="goBack()">&lt; Back</a></strong>
+                        <span> {{doctor?.specialization}}</span>
+                        <div class="drLocation" *ngIf="doctor?.location"><span></span>{{(doctor?.location )?
+                            (doctor?.location[0]): ''}}</div>
+                    </div>
+
+                    <div class="drExp FL">
+                        <strong>{{doctor?.expInYrs}}</strong>
+                        <p>Years of <br>Experience</p>
+                    </div>
+
+                    <div class="drExp">
+                        <strong>{{doctor?.surgeriesCount}}</strong>
+                        <p>Surgeries <br>done</p>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="FR drDetBtn drDetBtnNew">
+                        <a [href]="'tel:'+doctor?.mobileNo" class="btn btn-cyan-blue btn-call"><i class="icon"><img
+                                    src="/assets/images/phoneIcon.svg"></i> {{(doctor?.mobileNo)?doctor?.mobileNo: '70398 20610'}}</a>
+                        <a href="javascript:void(0);" class="bookAppLink btn btn-secondary btn-appointment"
+                            data-toggle="modal" data-target="#appointment-modal" tabindex="0"
+                            (click)="openBookDialog()">Book Appointment</a>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+
+            </div>
+            <div class="drConFree">
+                Consultation <span> 1000 </span> Free
+              </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="clears"></div>
+
+<div class="drAbout">
+    <div class="container" *ngIf="doctor">
+
+        <div class="drAboutDetails">
+
+            <h3>About <span>{{doctor?.title}} {{doctor?.name}}</span></h3>
+            <p>{{doctor?.about}}</p>
+
+            <h4>Specialized in</h4>
+            <div class="whtarepilesTxt ">
+                <ul class="row whtarepilesTxtList">
+                    <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngFor="let special of doctor?.specializedIn">
+                        {{special}}</li>
+                    <!-- <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Proctologist</li>
+                    <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Laparoscopic Surgeon,</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-why-surgify></app-why-surgify>
+<app-book-appointment *ngIf="doctor" [doctor]="doctor"></app-book-appointment>

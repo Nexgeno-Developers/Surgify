@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45.86" height="68.226" viewBox="0 0 45.86 68.226">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #d6f0fc;
+      }
+
+      .cls-4 {
+        stroke: #003884;
+        stroke-miterlimit: 10;
+        stroke-width: 1.3px;
+      }
+
+      .cls-5 {
+        fill: #902946;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1424" data-name="Rectangle 1424" class="cls-1" width="45.86" height="68.226" transform="translate(0 0)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_4969" data-name="Group 4969" transform="translate(0 0)">
+    <g id="Group_4969-2" data-name="Group 4969" class="cls-2">
+      <path id="Path_3035" data-name="Path 3035" class="cls-3" d="M24.437,26.643V40.5h14.54s3.9-.061,3.9-3.5a3.216,3.216,0,0,0-2.641-3.42H32.5V22.5s-.42-9.673-10.62-7.2c-11.88,2.88-9.72,21.42-9.72,21.42s.36,10.62,10.8,10.62h12.6l2.88,17.28s1.109,3.528,4.32,3.06c3.7-.54,3.06-4.86,3.06-4.86l-3.06-18.185s-.72-4.325-3.06-4.19-15.26,0-15.26,0"/>
+      <path id="Path_3036" data-name="Path 3036" class="cls-3" d="M43.305,7.181A6.682,6.682,0,1,1,36.624.5a6.681,6.681,0,0,1,6.681,6.681"/>
+      <path id="Path_3037" data-name="Path 3037" class="cls-3" d="M29.891,52.383H4.522s.269,6.12,5.669,6.84v7.5h14.22v-7.44a8.434,8.434,0,0,0,5.48-6.9"/>
+      <path id="Path_3038" data-name="Path 3038" class="cls-3" d="M19.987,59.81a2.833,2.833,0,1,1-5.666,0c0-1.565,2.833-4.669,2.833-4.669s2.833,3.1,2.833,4.669"/>
+      <path id="Path_3039" data-name="Path 3039" class="cls-4" d="M20.437,26.643V40.5h14.54s3.9-.061,3.9-3.5a3.216,3.216,0,0,0-2.641-3.42H28.5V22.5s-.42-9.673-10.62-7.2c-11.88,2.88-9.72,21.42-9.72,21.42s.36,10.62,10.8,10.62h12.6l2.88,17.28s1.109,3.528,4.32,3.06c3.7-.54,3.06-4.86,3.06-4.86l-3.06-18.185s-.72-4.325-3.06-4.19-15.26,0-15.26,0"/>
+      <path id="Path_3040" data-name="Path 3040" class="cls-4" d="M39.305,7.181A6.682,6.682,0,1,1,32.624.5,6.681,6.681,0,0,1,39.305,7.181Z"/>
+      <path id="Path_3041" data-name="Path 3041" class="cls-4" d="M25.891,52.383H.522s.269,6.12,5.669,6.84v7.5h14.22v-7.44A8.434,8.434,0,0,0,25.891,52.383Z"/>
+      <path id="Path_3042" data-name="Path 3042" class="cls-5" d="M15.987,59.81a2.833,2.833,0,1,1-5.666,0c0-1.565,2.833-4.669,2.833-4.669s2.833,3.1,2.833,4.669"/>
+    </g>
+  </g>
+</svg>

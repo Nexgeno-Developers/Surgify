@@ -1,0 +1,118 @@
+<div class="homepage">
+    <section class="homeBanner homeBannerInn">
+        <ul class="homeBan">
+            <li class="innerBanner innerBannerNetwork">
+                <div class="container">
+                    <div class="innerBannerTxt">
+                        <h3>Our Strong Bond of</h3>
+                        <h4>Network Hospitals</h4>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <div class="searchBox">
+        <div class="containerMain">
+
+            <div class="container">
+                <div class="selectCity">
+                    <div class="selectCityBox">
+                        <div class="searchmapIcon"></div>
+                        <select [(ngModel)]="selectedLocation">
+                            <option value="">All</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option>Delhi</option>
+                            <option>Thane</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="searchInput">
+                    <a href="" class="searchBtn"><img src="assets/images/searchIcon.svg"></a>
+                    <input type="text" name="" [(ngModel)]="searchText" placeholder="Search by Hospitals / Areas"
+                        class="form-control" (keyup.enter)="searchHospitals()">
+                    <a href="javascript:void(0);" class="searchArrow" (click)="searchHospitals()"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clears"></div>
+
+    <div class="netWorklisting">
+        <div class="container">
+            <ul class="row" *ngIf="!isLoading">
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12" *ngFor="let hospital of hospitals">
+                    <div class="netIMg">
+                        <img [src]="(hospital.image)">
+                    </div>
+                </li>
+                <!-- <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/02.png">
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/03.png">
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/04.png">
+                    </div>
+                </li>
+
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/05.png">
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/06.png">
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/01.png">
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/02.png">
+                    </div>
+                </li>
+
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/03.png">
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/04.png">
+                    </div>
+                </li>
+
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/05.png">
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="netIMg">
+                        <img src="assets/images/network/06.png">
+                    </div>
+                </li> -->
+
+
+            </ul>
+            <div class="loaderBox" *ngIf="isLoading">
+                <img src="assets/images/loader.svg">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+</div>

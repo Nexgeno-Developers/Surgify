@@ -1,0 +1,340 @@
+<div class="homepage">
+    <section class="homeBanner homeBannerInn">
+        <ul class="homeBan">
+
+            <li>
+                <div class="container">
+                    <div class="banner1 banner2 d-flex">
+                        <div class="left1">
+                            <div class="left1-inner">
+                                <h2>Best <span>{{surgeryData?.name}}</span> Treatment in <span>Mumbai</span></h2>
+                                <h3>{{(surgeryData?.subHeader)}}</h3>
+
+                                <ul class="boxes1List">
+                                    <li *ngFor="let point of surgeryData?.headingPoints">{{point}}</li>
+                                    <!-- <li>Painless surgery for Piles is possible now.</li>
+                                    <li>For latest Piles Treatment consult our experienced doctors.</li> -->
+                                </ul>
+                                <div class="action-row">
+                                    <a href="javascript:void(0);" class="bookAppLink btn btn-secondary btn-appointment"
+                                        data-toggle="modal" data-target="#appointment-modal"
+                                        (click)="openBookDialog()">Book Appointment</a>
+                                    <a href="javascript:void(0);" class="callIcon btn btn-primary2 btn-call"><i
+                                            class="icon"><img src="assets/images/phoneIcon.svg"></i> 70398 20610</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right1">
+                            <div class="bannerImg">
+                                <img src="assets/images/dr-home.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <div class="boxes4Banner">
+        <div class="container">
+            <h3 class="hassleBG">Hassle-free treatment!</h3>
+
+            <ul class="boxes4BannerList row">
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <span>
+                        <img src="assets/images/icon9.svg">
+                    </span>
+                    <p>Painless <br> Laser Surgery</p>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <span>
+                        <img src="assets/images/icon10.svg">
+                    </span>
+                    <p>Quick insurance <br> and paperwork</p>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <span>
+                        <img src="assets/images/icon11.svg">
+                    </span>
+                    <p>All insurance <br> covered</p>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <span>
+                        <img src="assets/images/icon12.svg">
+                    </span>
+                    <p>Free pick up & <br> drop facility</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- wht are piles -->
+    <div class="whtarepiles">
+        <div class="logoWater">
+            <img src="assets/images/logoWater.svg">
+        </div>
+        <div class="container">
+            <ul class="row">
+                <li class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="whtarepilesImg">
+                        <img [ngClass]="(surgeryData?.imageClass)"
+                        [src]="(surgeryData?.image)?'assets/images/'+surgeryData.image: 'assets/images/not_found/image-not-available-Surgeries.svg'">
+                    </div>
+                </li>
+                <li class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="whtarepilesTxt">
+                        <h4> <b>What</b> <span> are <strong>{{surgeryData?.name}}?</strong></span></h4>
+                        <!-- <h4> {{surgeryData?.whatIs}}</h4> -->
+                        <p>{{surgeryData?.whatIsAnswer}}</p>
+
+                        <!-- <p>Piles or hemorrhoids are swollen and inflamed veins around or in your anus and lower rectum.
+                            A swollen vein near the opening of the anal canal is called an external hemorrhoid and a
+                            swollen vein within a rectum is called an internal hemorrhoid. There are different types of
+                            piles like grade-1, 2, 3, and 4.</p>
+
+                        <p> Piles can affect people of any age regardless of their gender. This condition can cause a
+                            lot of difficulty in your daily life but the good news is it can be treated effectively with
+                            a simple piles surgery.</p> -->
+                    </div>
+
+                    <div class="whtarepilesTxt MT20" *ngIf="surgeryData?.causes?.length!=0">
+                        <h4> <b>What</b> <span> causes <strong>{{surgeryData?.name}}?</strong></span></h4>
+
+                        <ul class="row whtarepilesTxtList">
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngFor="let cause of surgeryData?.causes">
+                                {{cause}}</li>
+                            <!-- <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Chronic constipation</li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Obesity</li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Chronic diarrhea</li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Sitting for a longer period</li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Irritable bowels</li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Pregnancy</li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">Lifting heavy weights</li> -->
+                        </ul>
+                    </div>
+
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Symptoms  -->
+    <div class="symptoms" *ngIf="surgeryData?.symptoms?.length!=0">
+        <div class="container">
+            <h4><b>Symptoms</b></h4>
+        </div>
+        <div class="container container2">
+
+            <ul class="symptomsList">
+                <li *ngFor="let symptom of surgeryData?.symptoms">
+                    <div class="symptomsBox" [ngClass]="{'symptomHeight': (symptom?.length>75)}">
+                        <p>{{symptom}}</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <!--  -->
+
+
+    <!-- faqs -->
+    <div class="faqs">
+        <div class="container">
+            <h4><b>FAQs</b></h4>
+            <div class="accordion" id="accordionExample">
+                <ul class="row">
+                    <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" [class]="'row'">
+                        <ngb-panel *ngFor="let faq of surgeryData?.faqs; let i = index"
+                            [cardClass]="'col-lg-6 col-md-6 col-sm-12'">
+                            <ng-template ngbPanelHeader>
+                                <li>
+                                    <div class="card">
+                                        <div class="card-header" id="faq{{i}}">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link" type="button" ngbPanelToggle>
+                                                    {{faq?.question}}
+                                                </button>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ng-template>
+                            <ng-template ngbPanelContent>
+                                <li>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <p>
+                                                {{faq?.answer}}
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ng-template>
+                        </ngb-panel>
+
+                    </ngb-accordion>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <!--  -->
+
+
+    <!-- treatment -->
+
+    <div class="treatmentBox">
+        <div class="container">
+            <h4><b>Treatment</b></h4>
+
+            <ul class="row">
+                <li class="col-lg-6 col-md-12 col-sm-12" *ngFor="let treatment of surgeryData?.treatment">
+                    <span class="treatmentHead">{{treatment?.name}}</span>
+                    <ul class="row whtarepilesTxt">
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12" *ngFor="let lis of treatment?.list">
+                            {{lis}}
+                        </li>
+                        <!-- <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Passage examination</li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Proctology to examine the back passage
+                            lining more clearly for confirming presence of piles.</li> -->
+
+                    </ul>
+
+                </li>
+
+                <li class="col-lg-6 col-md-12 col-sm-12 PA">
+                    <div class="PA">
+                        <div class="aboutSurgery">
+                            <span class="treatmentHead">About the surgery</span>
+                            <pre>{{surgeryData?.about}}</pre>
+                            <!-- <p>You’ll be given anesthesia to numb the area and make an incision in the anal tissue around
+                                the hemorrhoid. The swollen vein inside the hemorrhoid is tied off to prevent bleeding, and
+                                the hemorrhoid is removed.</p> -->
+
+                        </div>
+                        <div class="treartDots1"></div>
+                        <div class="treartDots2"></div>
+                        <div class="heartSM1"></div>
+                        <div class="heartSM2"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- Painless -->
+
+    <div class="painless">
+        <div class="container">
+            <h4> <b>Painless</b> <span> {{surgeryData?.name}} Surgery Provided by <strong>Surgify</strong></span></h4>
+
+            <div class="painlessBox">
+                <div class="painlessImg">
+                    <img src="assets/images/painlessHeart.png">
+                </div>
+                <p>{{surgeryData?.providedByBody}} </p>
+                <!-- <p>You’ll be given anesthesia to numb the area and make an incision in the anal tissue around the
+                    hemorrhoid. The swollen vein inside the hemorrhoid is tied off to prevent bleeding, and the
+                    hemorrhoid is removed.</p> -->
+            </div>
+            <div class="clear"></div>
+
+        </div>
+    </div>
+    <!--  -->
+
+
+    <!--why Surgify?  -->
+    <div class="whySur">
+        <div class="container">
+            <h4> <b>Why</b> <span> <strong>Surgify?</strong></span></h4>
+            <ul class="row">
+                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <ul class="row whySurList">
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><span>1</span> Quick consulting and
+                            treatment</li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><span>2</span> Room of your choice</li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><span>3</span> Best treatment within your
+                            budget</li>
+                    </ul>
+                </li>
+
+                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <ul class="row whySurList MT0">
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><span>4</span> Free consultation</li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><span>5</span> Free post-surgery follow-ups
+                        </li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><span>6</span> Complete private consultation
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- workDNone -->
+
+    <!-- <div class="workDNone">
+        <ul class="sec3Boxes2">
+            <li>
+                <span>12,499+</span>
+                <p>Completed<br> Surgeries</p>
+            </li>
+            <li>
+                <span>110</span>
+                <p>Network<br> Hospitals</p>
+            </li>
+            <li>
+                <span>105</span>
+                <p>Experienced<br> Surgeons</p>
+            </li>
+            <a href="javascript:void(0);" class="btn btn-secondary btn-appointment" (click)="openBookDialog()" >Book Appointments</a>
+            <div class="clear"></div>
+        </ul>
+    </div> -->
+    <app-book-appointment [disease]="surgeryData"></app-book-appointment>
+    <!--  -->
+
+    <!--  -->
+    <div class="someSurgi" *ngIf="surgeryData?.facts?.length>0">
+        <div class="container">
+
+            <div class="someSurgiCont">
+                <div class="somwSurgiImg">
+                    <img src="assets/images/womenImg.svg">
+                </div>
+
+                <ul class="row whtarepilesTxt">
+                    <h4> <b>Some</b> <span> quick facts about <strong>{{surgeryData?.name}}</strong></span></h4>
+                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12" *ngFor="let fact of surgeryData?.facts">
+                        {{fact}}
+                    </li>
+                    <!-- <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">The size of piles can vary.</li>
+                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">A high-fiber diet can be effective, along with
+                        stool softeners to reduce the symptoms of piles.</li>
+                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">As people age, the connective tissue between the
+                        anus and rectum weakens, making them more susceptible to hemorrhoids.</li>
+                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Regular exercise can help prevent constipation
+                        and weight gain and, in turn, reduce the risk of hemorrhoids.</li> -->
+                </ul>
+                <div class="clear"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--  -->
+
+</div>

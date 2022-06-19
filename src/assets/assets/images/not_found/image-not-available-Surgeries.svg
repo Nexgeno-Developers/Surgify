@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="306.142" height="296.788" viewBox="0 0 306.142 296.788">
+    <defs>
+        <filter id="c5rn6qsvka" x="2.334" y="0" width="303.808" height="292.041" filterUnits="userSpaceOnUse">
+            <feOffset dx="20" dy="-24"/>
+            <feGaussianBlur result="blur"/>
+            <feFlood flood-color="#881543"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="zgp56vlteb" x="0" y="29.182" width="282.487" height="267.606" filterUnits="userSpaceOnUse">
+            <feOffset dy="10"/>
+            <feGaussianBlur stdDeviation="8.5" result="blur-2"/>
+            <feFlood flood-color="#fff" flood-opacity=".541"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Group 7066">
+        <g style="filter:url(#c5rn6qsvka)">
+            <path data-name="Path 2877" d="m660.885 336.86-13.475 8.573-8.012-13.96c-20.385-35.651-63.737-51.483-99.859-33.034-41.43 21.15-56.129 74.087-33.33 114l78.658 137.317a17.458 17.458 0 0 0 24.7 6.182l132.27-84.429c38.5-24.548 49.6-78.368 22.561-116.7-23.598-33.401-69.126-39.864-103.513-17.949z" transform="translate(-493.148 -266.681)" style="fill:#d6f0fc"/>
+        </g>
+        <g style="filter:url(#zgp56vlteb)">
+            <path data-name="istockphoto-1035479448-612x612 (2)" d="m630.394 328-10.994 6.926-6.535-11.282c-16.627-28.81-51.987-41.6-81.45-26.695-33.792 17.091-45.782 59.87-27.185 92.123l64.159 110.968a14.313 14.313 0 0 0 20.15 5l107.886-68.228c31.4-19.837 40.453-63.33 18.4-94.31-19.246-26.99-56.384-32.213-84.431-14.502z" transform="translate(-469.988 -246.001)" style="fill:#fff"/>
+        </g>
+        <text data-name="Image Not Available" transform="translate(140.5 147.681)" style="fill:#b5b6b7;font-size:12px;font-family:Poppins-Regular,Poppins"><tspan x="-31.17" y="0">Image Not</tspan><tspan x="-27.534" y="18">Available</tspan></text>
+    </g>
+</svg>

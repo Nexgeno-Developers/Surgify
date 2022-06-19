@@ -1,0 +1,83 @@
+<div class="homepage">
+    <section class="homeBanner homeBannerInn">
+        <ul class="homeBan">
+            <li class="innerBanner innerBannerDr">
+                <div class="container">
+                    <div class="innerBannerTxt">
+                        <h3>All your Questions Answered</h3>
+                        <h4>Community</h4>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <div class="searchBox">
+        <div class="containerMain">
+
+            <div class="container">
+                <div class="selectCity">
+                    <div class="selectCityBox">
+                        <select [(ngModel)]="selectedDisease">
+                            <option value="">All Categories</option>
+                            <option *ngFor="let disease of diseases;" [value]="disease.id">{{disease?.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="searchInput">
+                    <a (click)="searchCommunity()" style="cursor: pointer;" class="searchBtn"><img
+                            src="assets/images/searchIcon.svg"></a>
+                    <input type="text" name="" value="" placeholder="Search" class="form-control"
+                        [(ngModel)]="searchText">
+                    <a class="searchArrow" style="cursor: pointer;" (click)="searchCommunity()"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clears"></div>
+
+    <!-- <div class="communityBox">
+        <div class="container">
+            <div class="commuList" *ngFor="let qa of qas">
+                <h3>{{(qa?.question.indexOf('?')!=-1)? (qa.question) : (qa.question+' ?')}}</h3>
+                <div class="comHead">
+                    <div class="commSurg commSurgRed">{{qa?.diseaseName}}</div>
+                    <div class="comDate">{{qa?.created | date: 'ddMMMyyyy'}}</div>
+                </div>
+
+                <div class="comAns">Answer</div>
+                <p>{{qa?.answer}}</p>
+
+                <div class="comLast">
+                    <div class="comDate">{{qa?.created | date:'ddMMMyyyy'}},</div> <span class="comTxt">Surgify</span> <span
+                        class="comTxt2"><a href="#"><img src="assets/images/heart-com.svg"></a> by <span>0</span></span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="loaderBox" *ngIf="isLoading">
+        <img src="assets/images/loader.svg">
+        <p>Loading...</p>
+    </div>
+
+    <div class="searchNoResult" *ngIf="!isLoading && qas?.length==0 && queryText">
+        <div class="container">
+            <img src="assets/images/searchnoResult.svg">
+            <h4>
+                No Result found for <span>{{queryText}}</span>
+            </h4>
+        </div>
+    </div> -->
+    <div class="searchNoResult">
+        <div class="container">
+            <h4  style="color: black;font-size: 14px;font-weight: 0;">No community posts to show now. Ask doctor to get listed your queries here.</h4>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.86" height="68.226" viewBox="0 0 45.86 68.226">
+    <defs>
+        <clipPath id="m7t9xu8ira">
+            <path data-name="Rectangle 1424" style="fill:none" d="M0 0h45.86v68.226H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Group 4969" style="clip-path:url(#m7t9xu8ira)">
+        <path data-name="Path 3035" d="M24.437 26.643V40.5h14.54s3.9-.061 3.9-3.5a3.216 3.216 0 0 0-2.641-3.42H32.5V22.5s-.42-9.673-10.62-7.2C10 18.18 12.16 36.72 12.16 36.72s.36 10.62 10.8 10.62h12.6l2.88 17.28s1.109 3.528 4.32 3.06c3.7-.54 3.06-4.86 3.06-4.86l-3.06-18.185s-.72-4.325-3.06-4.19-15.26 0-15.26 0" style="fill:#d6f0fc"/>
+        <path data-name="Path 3036" d="M43.305 7.181A6.682 6.682 0 1 1 36.624.5a6.681 6.681 0 0 1 6.681 6.681" style="fill:#d6f0fc"/>
+        <path data-name="Path 3037" d="M29.891 52.383H4.522s.269 6.12 5.669 6.84v7.5h14.22v-7.44a8.434 8.434 0 0 0 5.48-6.9" style="fill:#d6f0fc"/>
+        <path data-name="Path 3038" d="M19.987 59.81a2.833 2.833 0 1 1-5.666 0c0-1.565 2.833-4.669 2.833-4.669s2.833 3.1 2.833 4.669" style="fill:#d6f0fc"/>
+        <path data-name="Path 3039" d="M20.437 26.643V40.5h14.54s3.9-.061 3.9-3.5a3.216 3.216 0 0 0-2.641-3.42H28.5V22.5s-.42-9.673-10.62-7.2C6 18.18 8.16 36.72 8.16 36.72s.36 10.62 10.8 10.62h12.6l2.88 17.28s1.109 3.528 4.32 3.06c3.7-.54 3.06-4.86 3.06-4.86l-3.06-18.185s-.72-4.325-3.06-4.19-15.26 0-15.26 0" style="stroke:#003884;stroke-miterlimit:10;stroke-width:1.3px;fill:none"/>
+        <path data-name="Path 3040" d="M39.305 7.181A6.682 6.682 0 1 1 32.624.5a6.681 6.681 0 0 1 6.681 6.681z" style="stroke:#003884;stroke-miterlimit:10;stroke-width:1.3px;fill:none"/>
+        <path data-name="Path 3041" d="M25.891 52.383H.522s.269 6.12 5.669 6.84v7.5h14.22v-7.44a8.434 8.434 0 0 0 5.48-6.9z" style="stroke:#003884;stroke-miterlimit:10;stroke-width:1.3px;fill:none"/>
+        <path data-name="Path 3042" d="M15.987 59.81a2.833 2.833 0 1 1-5.666 0c0-1.565 2.833-4.669 2.833-4.669s2.833 3.1 2.833 4.669" style="fill:#902946"/>
+    </g>
+</svg>

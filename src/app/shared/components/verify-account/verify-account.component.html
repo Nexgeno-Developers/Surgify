@@ -1,0 +1,55 @@
+<div class="forgotBox" *ngIf="!isVerified">
+    <div class="city-header text-center">
+        <h3 class="city-title">Verify Your Account</h3>
+        <button type="button" class="modal-close" (click)="activeModal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="loginTxt">
+
+        <div class=" ">
+            <!-- <form class=" "> -->
+                <div class="verTxt">
+                    We have sent a <strong></strong> verification code to your email id <a
+                        href="">{{email}}</a> <a href="" class="editLink"><img
+                            src="assets/images/editIcon.svg"></a>
+                </div>
+
+                <div class="form-group animation">
+                    <input type="email" class="form-control" placeholder="Email ID" id="" aria-describedby="emailHelp"
+                        [(ngModel)]="code">
+                    <label for="" class="form-label">Verification Code</label>
+                </div>
+
+                <div class="action-row">
+                    <button type="submit" class="btn btn-secondary btn-block" (click)="verifyAccount()">Verify my Account</button>
+                </div>
+            <!-- </form> -->
+        </div>
+    </div>
+</div>
+
+<div class="forgotThankBox" *ngIf="isVerified">
+    <div class="city-header text-center">
+        <h3 class="city-title">&nbsp;</h3>
+        <button type="button" class="modal-close" (click)="activeModal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="loginTxt">
+
+        <div class=" ">
+            <form class=" ">
+
+                <div class="fotThaTxt"> <img src="assets/images/greenCheck.svg" class="genCheck">
+                    Your account has been created successfully
+
+                </div>
+                <div class="action-row">
+                    <button type="submit" class="btn btnBack btn-secondary btn-block" (click)="openLogin()">Login Now</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

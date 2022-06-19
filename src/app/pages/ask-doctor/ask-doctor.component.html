@@ -1,0 +1,75 @@
+<div class="drDetailsTop" *ngIf="!isSubmitted">
+    <div class="drBgtop drBgtop2"></div>
+    <div class="containerMain asDocBox">
+        <div class="container">
+            <div class="askDocList">
+                <h3>Ask Doctor</h3>
+
+                <p>
+                    You can ask any questions to expert Doctors regarding surgery related or any information
+                    your are pretend to yourself. <br /><br />
+                </p>
+
+                <form [formGroup]="questionForm">
+                    <ul class="">
+                        <li>
+                            <div class="">
+                                <label>Select<span>*</span></label>
+                                <select class="form-control" formControlName="diseaseId">
+                                    <option value="">Select Category</option>
+                                    <option *ngFor="let disease of diseases;" [value]="disease.id">{{disease?.name}}
+                                    </option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <label>
+                                You're Question*
+                            </label>
+                            <textarea placeholder="Enter your question here" class="form-control"
+                                formControlName="question"> </textarea>
+                        </li>
+                        <li>
+                            <label>
+                                Upload your medical documents
+                            </label>
+                            <div class="uploadDrag">
+                                <div>DRAG FILE HERE OR <a href="">BROWSE</a></div>
+                                <div>.pdf, .jpg, .jpeg (Max Size 1MB)</div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="btn btn-secondary savePro" [disabled]="questionForm.invalid"
+                                (click)="postQuestion()">Submit My
+                                Question</button><br />
+                            <div class="askPri">Ask Doctor you agree to our <a href="/privacy-policy"
+                                    target="_blank">Privacy
+                                    Policy.</a></div>
+                        </li>
+                    </ul>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="drDetailsTop" *ngIf="isSubmitted">
+    <div class="drBgtop drBgtop2"></div>
+    <div class="containerMain asDocBox">
+        <div class="container">
+            <div class="askDocList askDocListInner">
+                <img src="assets/images/greenCheck.svg">
+                <p> You're question for "<strong>{{selectedDisease}}</strong>" as been submitted sucessfully!
+                    Our doctors will provide answer shortly.</p>
+                <a href="/ask-doctor" class="btn btnAsk">Ask more Questions?</a>
+                <a href="/community" class="viewLink">View Community</a>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

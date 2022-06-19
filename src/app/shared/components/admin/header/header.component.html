@@ -1,0 +1,44 @@
+<header class="surgify-header adminHeader">
+    <div class="container-fluid d-flex">
+        <div class="primary-header-left d-flex">
+          <a class="hamburger hamburger--squeeze js-hamburger" href="javascript:void(0);" style="display: block;">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </a>
+          <div class="logo-wrap">
+            <a href="javascript:void(0);">
+              <img src="assets/images/surgify-logo.svg">
+            </a>
+          </div>
+        </div>
+        <div class="primary-header-right d-flex">
+           
+        
+          <div class="user-login-wrap">
+            <div class="dropdown user-dropdown" ngbDropdown>
+              <a class="btn btn-cyan-blue dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown" aria-expanded="false">
+                <span class="img-wrap icon">
+                  <img src="assets/images/userIcon.svg">
+                </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
+                <ul>
+                  <!-- <li>
+                    <a class="dropdown-item" href="javascript:void(0);">My Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);">Ask Doctors</a>
+                  </li> -->
+                  <li>
+                    <a class="dropdown-item highlight" href="javascript:void(0);" (click)="logout()" ngbDropdownItem>Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+</header>

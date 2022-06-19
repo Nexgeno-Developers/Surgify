@@ -25,7 +25,8 @@ export class HeaderComponent implements OnInit {
   toggleHamburgerMobileSub = false;
   menuList: any[] = [
     { label: 'our-surgeries', isOpen: false },
-    { label: 'our-patients', isOpen: false }
+    { label: 'our-patients', isOpen: false },
+    { label: 'team-surgify', isOpen: false }
   ];
 
   constructor(private specializationService: SpecializationService,
@@ -36,7 +37,6 @@ export class HeaderComponent implements OnInit {
     public userService: UserService,
     private render: Renderer2,
     private route: ActivatedRoute) {
-      this.toggleMenuMobile('our-surgeries');
     this.route.queryParams.subscribe({
       next: (params) => {
         if (params && params['showLogin']) {
@@ -83,6 +83,9 @@ export class HeaderComponent implements OnInit {
       if (specialists && specialists.length > 0) {
         // console.log(specialists);
         this.specialities = specialists;
+        this.specialities.forEach((spl) => {
+          this.menuList.push({ label: spl.name, isOpen: false });
+        });
         localStorage.setItem('specialities', JSON.stringify(this.specialities));
 
         this.surgeriesService.getAllSurgeries(100, 0, 0).subscribe({
@@ -96,32 +99,13 @@ export class HeaderComponent implements OnInit {
           },
           error: (err) => {
           }
-        })
-
-        // specialists.forEach((sp: any) => {
-        //   this.surgeriesService.getAllSurgeriesBySpecialization(sp.id).subscribe((surgeries) => {
-        //     let spl: any = this.specialities.find((spl: any) => spl.id == sp.id);
-        //     let sur = localStorage.getItem('surgeries');
-        //     let items = [];
-        //     if (!sur) {
-        //       items.push(surgeries[0]);
-        //     } else {
-        //       items = JSON.parse(sur);
-        //       items.push(surgeries[0]);
-        //     }
-        //     spl['surgeries'] = surgeries;
-        //     this.surgeries.push(...surgeries);
-        //     localStorage.setItem('surgeries', JSON.stringify(items));
-        //   }, err => {
-        //     // console.log(err);
-        //   });
-        // });
+        });
       }
 
 
     }, error => {
       // console.log(error);
-    })
+    });
   }
 
 
@@ -235,7 +219,7 @@ export class HeaderComponent implements OnInit {
 
   topMenuClass(menu: any) {
     let foundM = this.menuList.find((men: any) => menu == men.label);
-    if (foundM) {
+    if (foundM && (window.innerWidth - 17 < 1253) ) {
       return foundM['isOpen'] ? 'show' : '';
     }
     return '';
@@ -247,5 +231,21 @@ export class HeaderComponent implements OnInit {
       return rv;
     }, {});
   };
+
+  setStyleForDM() {
+    if (window.innerWidth - 17 > 1253) {
+      return {};
+    } else {
+      return { display: 'none' };
+    }
+  }
+
+  setStyleForM(){
+    if (window.innerWidth - 17 > 1253) {
+      return { display: 'none' };
+    } else {
+      return {};
+    }
+  }
 
 }

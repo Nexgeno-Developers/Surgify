@@ -3,6 +3,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DoctorService } from 'src/app/services/doctor/doctor.service';
+import { SpecializationService } from 'src/app/services/specialization/specialization.service';
+import { SurgeriesService } from 'src/app/services/surgies/surgeries.service';
 import { UserService } from 'src/app/services/user/user.service';
 import { LoginComponent } from '../login/login.component';
 
@@ -30,6 +32,9 @@ import { LoginComponent } from '../login/login.component';
 export class FooterComponent implements OnInit {
 
   screenWidth = 0;
+  specialities: any[] = [];
+  surgeries: any[] = [];
+  groupedList: any[] = [];
   helpMenu: string;
   toggleData: any = {
     home: '',
@@ -39,13 +44,16 @@ export class FooterComponent implements OnInit {
     ortho: '',
     gyna: '',
     urology: '',
-    vascular: '',
+    vascular: ''
+  };
 
-  }
+
   constructor(
     private modalService: NgbModal,
     public router: Router,
-    public userService: UserService
+    public userService: UserService,
+    private specializationService: SpecializationService,
+    private surgeriesService: SurgeriesService,
   ) {
     this.helpMenu = 'out';
     this.toggleData = {
@@ -61,7 +69,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.onResize();
+    this.getAllSpecializations();
   }
 
   toggleHelpMenu(menu: string): void {
@@ -69,6 +77,11 @@ export class FooterComponent implements OnInit {
       return;
     }
     this.toggleData[menu] = this.toggleData[menu] == 'out' ? 'in' : 'out';
+    Object.keys(this.toggleData).forEach((td) => {
+      if (td !== menu) {
+        this.toggleData[td] = 'out';
+      }
+    });
     this.helpMenu = this.helpMenu === 'out' ? 'in' : 'out';
   }
 
@@ -78,29 +91,15 @@ export class FooterComponent implements OnInit {
     let screenWidth = window.innerWidth;
     this.screenWidth = screenWidth;
     if (screenWidth < 600) {
-      this.toggleData = {
-        home: 'out',
-        patients: 'out',
-        proctology: 'out',
-        lapro: 'out',
-        ortho: 'out',
-        gyna: 'out',
-        urology: 'out',
-        vascular: 'out',
-      }
+      Object.keys(this.toggleData).forEach((td) => {
+          this.toggleData[td] = 'out';
+      });
       this.helpMenu = 'out';
     } else {
       this.helpMenu = 'in';
-      this.toggleData = {
-        home: 'in',
-        patients: 'in',
-        proctology: 'in',
-        lapro: 'in',
-        ortho: 'in',
-        gyna: 'in',
-        urology: 'in',
-        vascular: 'in',
-      }
+      Object.keys(this.toggleData).forEach((td) => {
+        this.toggleData[td] = 'in';
+    });
     }
   }
 
@@ -116,5 +115,42 @@ export class FooterComponent implements OnInit {
   openLogin() {
     this.modalService.open(LoginComponent, { modalDialogClass: 'modal-dialog-centered', windowClass: 'loginPup' });
   }
+
+  getAllSpecializations() {
+    this.specializationService.getAllSpecializations().subscribe((specialists) => {
+      if (specialists && specialists.length > 0) {
+        // console.log(specialists);
+        this.specialities = specialists;
+        this.specialities.forEach((spl) => {
+          this.toggleData[spl.name] = 'out';
+        });
+
+        this.onResize();
+        this.surgeriesService.getAllSurgeries(100, 0, 0).subscribe({
+          next: (surgeriesList) => {
+            this.groupedList = this.groupBy(surgeriesList, 'specializationId');
+
+            specialists.forEach((sp: any) => {
+              sp['surgeries'] = this.groupedList[sp.id];
+            });
+
+          },
+          error: (err) => {
+          }
+        });
+      }
+
+
+    }, error => {
+      // console.log(error);
+    });
+  }
+
+  groupBy(xs: any[], key: string) {
+    return xs.reduce(function (rv, x) {
+      (rv[x[key]] = rv[x[key]] || []).push(x);
+      return rv;
+    }, {});
+  };
 
 }

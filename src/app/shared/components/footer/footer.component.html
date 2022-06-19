@@ -5,7 +5,7 @@
                 <div class="footer-left">
                     <img src="assets/images/surgify-footer-logo.png" alt="">
                 </div>
-                <div class="footer-right">
+                <div class="footer-right" style="width:100%">
                     <div class="footer-col">
                         <div class="footer-links-container">
                             <h3 class="footer-links-title" (click)="toggleHelpMenu('home')">
@@ -36,7 +36,7 @@
                         </div>
                         <div class="footer-links-container">
                             <h3 class="footer-links-title" (click)="toggleHelpMenu('patients')">
-                                <a href="/" class="arrow">For Patients</a>
+                                <a href="javascript:void(0);" class="arrow">For Patients</a>
                             </h3>
                             <div class="footer-links-wrap" id="footer-collapse-Patients" [@slideInOut]="toggleData?.patients">
                                 <ul class="footer-links">
@@ -63,178 +63,26 @@
                         </div>
                     </div>
                     <div class="footer-col">
-                        <div class="footer-links-container">
-                            <h3 class="footer-links-title" (click)="toggleHelpMenu('proctology')">
-                                <a href="javascript:void(0)" class="arrow"
-                                    >Proctology</a>
-                            </h3>
-                            <div class="footer-links-wrap" id="footer-collapse-proctology" [@slideInOut]="toggleData?.proctology">
-                                <ul class="footer-links">
-                                    <li>
-                                        <a href="/proctology/piles">Piles</a>
-                                    </li>  
-                                    <li>
-                                        <a href="/proctology/fistula">Fistula</a>
-                                    </li>
-                                    <li>
-                                        <a href="/proctology/fissure">Fissure</a>
-                                    </li>
-                                    <li>
-                                        <a href="/proctology/pilonidal-sinus">Pilonidal Sinus</a>
-                                    </li>
-                                </ul>
+                        <div class="row">
+                            <div class="footer-links-container col-lg-3 col-md-4 col-sm-12" *ngFor="let speciality of specialities">
+                                <h3 class="footer-links-title" (click)="toggleHelpMenu(speciality.name)">
+                                    <a href="javascript:void(0)" class="arrow"
+                                        > {{speciality.name}}</a>
+                                </h3>
+                                <div class="footer-links-wrap" id="footer-collapse-proctology" [@slideInOut]="toggleData[speciality.name]">
+                                    <ul class="footer-links">
+                                        <li *ngFor="let surgery of speciality?.surgeries">
+                                            <a [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="footer-links-container">
-                            <h3 class="footer-links-title" (click)="toggleHelpMenu('lapro')">
-                                <a href="javascript:void(0)" class="arrow"
-                                    >Laparoscopy</a>
-                            </h3>
-                            <div class="footer-links-wrap" id="footer-collapse-laparoscopy" [@slideInOut]="toggleData?.lapro">
-                                <ul class="footer-links">
-                                    <!-- <li>
-                                        <a href="javascript:void(0);">Hernia Treatment</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Gallstone Treatment</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Rectal Prolapse Treatment</a>
-                                    </li>
-                                    <li>
-                                        <a href="/surgery-details/Appendicitis%20Treatment%20/623f28059eb7ae3538a2d03b">Appendicitis Treatment</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Hysterectomy</a>
-                                    </li> -->
-                                    <li ><a  href="/laprascopy/appendicitis-treatment">Appendicitis Treatment </a></li>
-                                    <li  ><a  href="/laprascopy/gallstone-treatment" >Gallstone Treatment</a></li>
-                                    <li  ><a  href="/laprascopy/hernia-treatment"   >Hernia Treatment</a></li>
-                                    <li  ><a  href="/laprascopy/rectal-prolapse-treatment"  >Rectal Prolapse Treatment</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-links-container">
-                            <h3 class="footer-links-title" (click)="toggleHelpMenu('ortho')">
-                                <a href="javascript:void(0)" class="collapse">Orthopedic</a>
-                            </h3>
-                            <div class="footer-links-wrap" id="footer-collapse-orthopedic" [@slideInOut]="toggleData?.ortho">
-                                <ul class="footer-links">
-                                    <li>
-                                        <a href="/orthopedic/carpal-tunnel-syndrome">Carpal Tunnel Syndrome</a>
-                                    </li>
-                                    <li>
-                                        <a href="/orthopedic/acl-tear">ACL-Tear</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                      
                     </div>
 
-                    <div class="footer-col">
-                        <div class="footer-links-container">
-                            <h3 class="footer-links-title" (click)="toggleHelpMenu('gyna')">
-                                <a href="javascript:void(0)" class="collapse"
-                                    data-toggle="collapse">Gynaecology</a>
-                            </h3>
-                            <div class="footer-links-wrap" id="footer-collapse-gynaecology" [@slideInOut]="toggleData?.gyna">
-                                <ul class="footer-links">
-                                    <!-- <li>
-                                        <a href="javascript:void(0);">Hysteroscopy</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Female Genital Procedures</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Vaginal Cyst</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Irregular Periods</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Hymenoplasty</a>
-                                    </li> -->
-                                    <li>
-                                        <a href="/gynecology/vaginal-discharge">Vaginal Discharge</a>
-                                    </li>
-                                    <li>
-                                        <a href="/gynecology/pap-smear">Pap Smear</a>
-                                    </li>
-                                    <li>
-                                        <a href="/gynecology/pcod-and-pcos">PCOS PCOD</a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="javascript:void(0);">Pregnancy Care</a>
-                                    </li> -->
-                                    <li>
-                                        <a href="/gynecology/vaginal-tightening">Vaginal Tightening</a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="javascript:void(0);">Hysterectomy</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">Termination Of Pregnancy</a>
-                                    </li> -->
-                                    <li>
-                                        <a href="/gynecology/ovarian-cyst">Ovarian Cyst</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <div class="footer-links-container">
-                            <h3 class="footer-links-title" (click)="toggleHelpMenu('urology')">
-                                <a href="javascript:void(0)" class="collapse">Urology</a>
-                            </h3>
-                            <div class="footer-links-wrap" id="footer-collapse-urology" [@slideInOut]="toggleData?.urology">
-                                <ul class="footer-links">
-                                    <li>
-                                        <a href="/urology/kidney-stone-treatment">Kidney Stone Treatment</a>
-                                    </li>
-                                    <li>
-                                        <a href="/urology/hydrocele">Hydrocele</a>
-                                    </li>
-                                    <li>
-                                        <a href="/urology/phimosis">Phimosis</a>
-                                    </li>
-                                    <li>
-                                        <a href="/urology/cryptoscopy">Cystoscopy</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-links-container">
-                            <h3 class="footer-links-title" (click)="toggleHelpMenu('vascular')">
-                                <a href="javascript:void(0)" class="collapse">Vascular</a>
-                            </h3>
-                            <div class="footer-links-wrap" id="footer-collapse-vascular" [@slideInOut]="toggleData?.vascular">
-                                <ul class="footer-links">
-                                    <li>
-                                        <a href="/vascular/varicose-veins">Varicose Veins</a>
-                                    </li>
-                                    <li>
-                                        <a href="/vascular/varicocele">Varicocele</a>
-                                    </li>
-                                    <li>
-                                        <a href="/vascular/spider-veins">Spider Veins</a>
-                                    </li>
-                                    <li>
-                                        <a href="/vascular/uterine-fibroids">Uterine Fibroids</a>
-                                    </li>
-                                    <li>
-                                        <a href="/vascular/diabetic-foot-ulcer">Diabetic Foot Ulcer</a>
-                                    </li>
-                                    <li>
-                                        <a href="/vascular/deep-vein-thrombosis">Deep Vein Thrombosis</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                 
+                  
                 </div>
             </div>
         </div>

@@ -128,7 +128,7 @@
             <div class="container-header">
                 <nav class="navbar navbar-expand-custom">
                     <ul class="primary-navbar-nav">
-                        <li class="primary-navbar-item active-page">
+                        <li class="primary-navbar-item active-page" [ngStyle]="setStyleForDM()">
                             <div class="primary-navbar-item-inner">
                                 <a routerLinkActive="active" href="javascript:void(0);"
                                     class="primary-navbar-link primary-navbar-link-dropdown"
@@ -154,6 +154,40 @@
                                                             [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
                                                     </li>
                                                 </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="primary-navbar-item active-page" *ngFor="let speciality of specialities" [ngStyle]="setStyleForM()">
+                            <div class="primary-navbar-item-inner">
+                                <a routerLinkActive="active" href="javascript:void(0);"
+                                    class="primary-navbar-link primary-navbar-link-dropdown"
+                                    [ngClass]="topMenuClass(speciality?.name)"
+                                    (click)="toggleMenuMobile(speciality?.name)">{{speciality?.name}}
+                                    <!-- <strong>Surgeries</strong> -->
+                                </a>
+                                <div class="collapse primary-child-navbar" id="collapse-surgeries"
+                                    [ngClass]="topMenuClass(speciality?.name)">
+                                    <nav class="">
+                                        <ul class="navbar-nav" [ngClass]="setStyleByWidth(speciality)">
+                                            <li class="nav-item dropdown" *ngFor="let surgery of speciality?.surgeries">
+                                                <a href="javascript:void(0);" class="nav-link"
+                                                    routerLinkActive="active" role="button"
+                                                    
+                                                    (click)="hideHamburger(speciality)"
+                                                    data-toggle="dropdown"
+                                                    [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
+                                                <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink"
+                                                    [ngClass]="setStyleByWidth(speciality)">
+                                                    <li *ngFor="let surgery of speciality?.surgeries">
+                                                        <a class="dropdown-item" href="javascript:void(0);"
+                                                            routerLinkActive="active"
+                                                            (click)="hideHamburger(speciality)"
+                                                            [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
+                                                    </li>
+                                                </ul> -->
                                             </li>
                                         </ul>
                                     </nav>
@@ -202,14 +236,14 @@
                                 <a href="javascript:void(0);" [ngClass]="topMenuClass('team-surgify')"
                                     (click)="toggleMenuMobile('team-surgify')"
                                     class="primary-navbar-link primary-navbar-link-dropdown" data-toggle="collapse"
-                                    data-target="#collapse-Patients" aria-controls="collapse-Patients">Team
+                                    data-target="#collapse-team-surgify" aria-controls="collapse-team-surgify">Team
                                     <strong>Surgify</strong></a>
                                 <div class="collapse primary-child-navbar" [ngClass]="topMenuClass('team-surgify')"
-                                    id="collapse-Patients">
+                                    id="collapse-team-surgify">
                                     <nav class="">
                                         <ul class="navbar-nav mobileSubMenu">
                                             <li class="nav-item">
-                                                <a style="cursor: pointer;" routerLink="'/about-us'">About Us</a>
+                                                <a style="cursor: pointer;" [routerLink]="'/about-us'" (click)="toggleMenu()">About Us</a>
                                             </li>
                                         </ul>
                                     </nav>

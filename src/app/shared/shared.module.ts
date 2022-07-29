@@ -16,16 +16,18 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyAccountComponent } from './components/verify-account/verify-account.component';
 import { AdminHeaderComponent } from './components/admin/header/header.component';
+import { BlogSummaryComponent } from './components/blog-summary/blog-summary.component';
 
 
 
 @NgModule({
   declarations: [FooterComponent, HeaderComponent, BookingComponent, DoctorsSummaryComponent, DoctorDetailsComponent,
     WhySurgifyComponent, BookAppointmentComponent, LoginComponent, SignUpComponent, ForgotPasswordComponent, VerifyAccountComponent,
-    AdminHeaderComponent],
+    AdminHeaderComponent,
+    BlogSummaryComponent],
   imports: [CommonModule, NgbModule, NgbCarouselModule, RouterModule, NgbDropdownModule, FormsModule, ReactiveFormsModule],
   exports: [FooterComponent, HeaderComponent, NgbCarouselModule, CarouselModule, NgbAccordionModule, DoctorsSummaryComponent,
     WhySurgifyComponent, BookAppointmentComponent, FormsModule, NgbDropdownModule, LoginComponent, SignUpComponent,
-  ReactiveFormsModule, NgbPopoverModule, AdminHeaderComponent]
+  ReactiveFormsModule, NgbPopoverModule, AdminHeaderComponent, BlogSummaryComponent]
 })
 export class SharedModule { }

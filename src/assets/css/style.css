@@ -768,6 +768,7 @@ span.drProAct{ font-weight: 600; font-size: 1.6rem;color: #0b0d10; margin-top: 5
 .drDetailsTop .containerMain::after{ width: 146px; height: 158px; background: url(assets/images/searchBgRight.svg) no-repeat; content: ''; position: absolute; right: 0; top: 10px; right: -60px; z-index: 0  }
 
 .drBgtop{ position: absolute; top: 0; width: 100%; background: #D6F0FC; height:  62% }
+.drBgtop .drBgtopBlog{ height:300px}
 
 .drDetimg{ width: 260px }
 .drDetimg img{ display: block; border-radius: 10px; width: 100%; height: auto;} 
@@ -1046,3 +1047,68 @@ background-color:#fff;
 .adminBxIn img{ margin-right: 10px; }
 
 .drDetBtn.drDetBtnNew { width: auto; margin-top: 0; float: right !important;}
+
+.searchBoxBlog.searchBox .container{ padding: 0 30px 0 0 !important; }
+.searchBoxBlog.searchBox .container .searchInput{ border: 0; }
+
+.blogListBox{ margin-top: 50px; }
+.blogListBox .blog-post{ max-width: 100%; margin-right: 0; }
+
+.blogListBox li{ margin-bottom: 80px; }
+.blogListBox .blog-post .post-content{ height: 200px; padding-bottom:0 ;}
+
+.blogsDetails .container{ background: none; box-shadow: none; min-height: auto; padding: 0 !important;     align-items: flex-start;}
+.blogsDetails.drDetailsTop .container::after{ display: none; }
+
+.blogsLeft{ max-width: 750px; width: 100%;box-shadow: 0 3px 20px 0 rgba(0, 55, 132, 0.1); background-color: #fff;     box-shadow: 0px 3px 20px #0037841a; border-radius: 8px;}
+.blogsLeft h1{ padding: 20px 30px 0; font-size: 24px; font-weight: 600; color: #0b0d10; }
+
+.backBtn{ float: right; font-size: 14px; font-weight: 500; color: #003784; padding-right: 30px; position: relative; padding-left: 15px; }
+.backBtn::before{ content: ''; width: 10px; height: 10px; background: url(../images/arrow-SM.svg) no-repeat center center; display: block; transform: rotate(180deg);  left: 0; top: 5px; position: absolute; }
+
+.blogBigImg{ margin-top: 15px; }
+.blogBigImg img{ width: 100%; height: auto; display: block; }
+
+.blogConta{ padding: 20px 30px; }
+.blogDate{ font-size: 14px; padding-bottom: 20px;}
+.blogDate span{ color: #717780; display: inline-block; padding-right: 20px; }
+.blogDate b{ color: #881543; }
+.blogConta p, .blogConta pre p{ padding-bottom: 20px;   line-height: 1.86;letter-spacing: 0.14px;  color: #0b0d10;}
+.blogConta p strong, .blogConta pre p strong{ font-weight: 600; }
+.blogConta pre {    white-space: pre-wrap;}
+
+.blogTags{ display: flex; font-size: 12px; align-items: center; margin-top: 50px; }
+.blogTags a{ margin-left: 10px;border: solid 1px #e8e8e8; height: 24px; display: inline-flex; align-items: center; justify-content: center; padding: 0 10px; border-radius: 20px; color: #717780;}
+.blogTags a:hover{ background: #881543; color: #fff; }
+
+.blogsRight{max-width: 361px; width: 100%;  background-color: #fff; margin-left: 30px; box-shadow: 0px 3px 20px #0037841a; border-radius: 8px; padding: 30px;}
+.blogsRight h2{ font-size: 20px;   color: #881543; font-weight: 500; padding-bottom: 15px; }
+
+.blodRigList{ display: flex; }
+.blogsRight li{ padding-bottom: 30px; }
+.blodRigListTxt p{ color: #003784;line-height: 1.54; }
+.blodRigListTxt b{ color: #717780; font-size: 12px; line-height: 1.25; display: block; padding-bottom: 5px; letter-spacing: 0.12px; }
+.blodRigListimg img { width: 80px; height: 80px; display: block; border-radius: 5px;}
+.blodRigListTxt{ width: 200px; padding-left: 20px; }
+
+.filterLinks a{ font-size: 12px; background: #ecf4ff; height: 24px; padding-left: 10px; padding-right: 30px; color: #0b0d10; letter-spacing: 0.12px; display:  inline-flex; align-items: center; border-radius: 12px; position: relative; margin-right: 10px;  }
+.filterLinks a::before{ content: ''; width: 18px; height: 18px; display: block; background: url(../images/closeSm.svg) no-repeat center center; position: absolute; right: 5px; }
+
+.videoBox.blog-post{ max-width: initial; width: 100%; cursor: pointer; transition: all .3s;}
+
+.blog-post:hover{  box-shadow: 0 3px 20px 0 rgba(0, 55, 132, 0.1); }
+
+
+
+
+.videoBox.blog-post .entry-title{ font-size: 14px;  }
+.videoBox.blog-post .entry-title a{ line-height: 25px; }
+
+.videoBox.blog-post .featured-image a{ position: relative; display: flex;}
+.videoBox.blog-post .featured-image a::before{ content: '';   background: url(../images/playIcon.svg) no-repeat center center; position: absolute; z-index: 1; width: 100%; height: 100%; }
+
+.videoListing { padding-top: 30px; }
+.videoListing li{ margin-bottom: 50px; }
+
+.videoListDropBox .selectCityBox{ padding-left: 0;  }
+

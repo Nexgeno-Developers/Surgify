@@ -36,6 +36,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/admin/layout/layout.module').then((m) => m.LayoutModule)
   },
   {
+    path: 'blogs',
+    loadChildren: ()=> import('./pages/blogs/blogs.module').then((m)=> m.BlogsModule)
+  },
+  {
     path: 'about-us',
     loadChildren: () => import('./pages/simplify-surgeries/simplify-surgeries.module').then((m) => m.SimplifySurgeriesModule)
   },

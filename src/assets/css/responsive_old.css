@@ -236,10 +236,6 @@
    .whySurgifyBtn span{display:none;}
    .admList table{ width: 1000px }
    .admList-responsive{     overflow-x: auto; }
-   .blogsDetails .container{ display: block; }
-	.blogsLeft{ max-width: inherit; }
-	.blogsRight{  margin: 40px auto 0; }
-	.blogsDetails .drBgtop{ height: 30%; }
 
    
 }
@@ -265,7 +261,7 @@
    .painlessBox{ padding: 30px; }
 
    .searchBox .container{ min-height: auto; padding:30px 20px 20px 20px !important; display: block; margin-top: -100px }
-   .searchInput{ border:0; padding: 0 20px }
+   .searchInput{ border:0; padding: 20px 0 0 0 }
    .selectCity{ width: 100% }
    .selectCityBox{ padding-right: 10px }
    .drAboutDetails{ width: 100% }
@@ -458,9 +454,9 @@
 
 }
 @media screen and (max-width: 500px){
-	.welcomeSlider li{max-width:50%;}
+   .welcomeSlider li{max-width:50%;}
 
-	.wel3Boxes li{width:100%; padding-right:0;}
+   .wel3Boxes li{width:100%; padding-right:0;}
 }
 @media screen and (max-width: 480px){
    .boxes4Banner .container{ padding: 53px 30px 0 !important; }

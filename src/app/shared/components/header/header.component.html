@@ -32,6 +32,7 @@
                                     <ul class="outPaiSub">
                                         <li><a style="cursor: pointer;" (click)="askDoctor()">Ask Doctor</a></li>
                                         <li><a [routerLink]="'/community'" routerLinkActive="active">Community</a></li>
+                                        <li><a [routerLink]="'/blogs'" routerLinkActive="active">Blogs</a></li>
 
                                     </ul>
                                 </li>
@@ -226,6 +227,7 @@
                                             <li class="nav-item">
                                                 <a [routerLink]="'/community'" (click)="toggleMenu()">Community</a>
                                             </li>
+                                            <li><a [routerLink]="'/blogs'" (click)="toggleMenu()">Blogs</a></li>
                                         </ul>
                                     </nav>
                                 </div>

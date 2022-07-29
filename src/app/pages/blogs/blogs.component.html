@@ -1,0 +1,83 @@
+<div class="homepage">
+    <section class="homeBanner homeBannerInn">
+        <ul class="homeBan">
+            <li class="innerBanner innerBannerDr">
+                <div class="container">
+                    <div class="innerBannerTxt">
+                        <h3>Surgify Team</h3>
+                        <h4>Blogs</h4>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <div class="searchBox searchBoxBlog">
+        <div class="containerMain">
+
+            <div class="container">
+
+                <div class="searchInput">
+                    <a href="javascript:void(0)" (click)="search()" class="searchBtn"><img src="assets/images/searchIcon.svg"></a>
+                    <input type="text" name="" value="" placeholder="Search by key words" class="form-control" [(ngModel)]="searchText">
+                    <a href="javascript:void(0)" class="searchArrow" [ngClass]="{'searchArrow2': searchText}" (click)="search()"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clears"></div>
+
+    <div class="blogListBox">
+        <div class="container">
+
+            <div class="searchHead" *ngIf="searchedText && !isLoading">
+                Search Result for <span>{{searchedText}}</span>
+            </div>
+
+            <div class="blog-right">
+                <ul class="row">
+                    <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12" *ngFor="let blog of blogsList" (click)="selectBlog(blog)">
+                        <app-blog-summary [blog]="blog"></app-blog-summary>
+                        <!-- <figure class="blog-post">
+                            <div class="post-inner">
+                                <div class="featured-image">
+                                    <a href="/summary">
+                                        <img src="assets/images/blog/blog-img-01.jpg">
+                                    </a>
+                                </div>
+                                <div class="post-content">
+                                    <div class="entry-date">04 Sep 2021</div>
+                                    <div class="entry-title">
+                                        <a href="blog-details.html">Exploring spinal cord injury management and
+                                            rehabilitation in Surgify webinar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure> -->
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="loaderBox" *ngIf="isLoading">
+                <img src="assets/images/loader.svg">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="searchNoResult" *ngIf="!isLoading && blogsList?.length==0">
+        <div class="container">
+            <img src="assets/images/searchnoResult.svg">
+            <h4>
+                No Result found for <span>{{searchedText}}</span>
+            </h4>
+        </div>
+    </div>
+</div>
+
+<!-- <app-blog-detail [blog]="selectedBlog"></app-blog-detail> -->

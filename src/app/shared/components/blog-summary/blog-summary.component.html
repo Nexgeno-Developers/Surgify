@@ -1,14 +1,14 @@
 <figure class="blog-post">
     <div class="post-inner">
         <div class="featured-image">
-            <a routerLink="{{'/blogs/'+blog?.slug}}">
+            <a routerLink="{{'/blog/'+blog?.slug}}">
                 <img [src]="blog?.summaryPath">
             </a>
         </div>
         <div class="post-content">
             <div class="entry-date">{{blog?.created | date: 'dd MMM YYYY'}}</div>
             <div class="entry-title">
-                <a routerLink="{{'/blogs/'+blog?.slug}}">{{blog?.title}}</a>
+                <a routerLink="{{'/blog/'+blog?.slug}}">{{blog?.title}}</a>
             </div>
         </div>
     </div>

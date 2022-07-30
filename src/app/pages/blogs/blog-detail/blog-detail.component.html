@@ -12,7 +12,7 @@
 
             <div class="blogsLeft" *ngIf="!loading">
                 <h1>{{blogData?.title}}</h1>
-                <a href="/blogs" class="backBtn">Back</a>
+                <a href="/blog" class="backBtn">Back</a>
                 <div class="clear"></div>
 
                 <div class="blogBigImg">
@@ -53,7 +53,7 @@
 
                 <ul>
                     <li *ngFor="let blog of otherBlogs">
-                        <a routerLink="{{'/blogs/'+blog?.slug}}" class="blodRigList">
+                        <a routerLink="{{'/blog/'+blog?.slug}}" class="blodRigList">
                             <div class="blodRigListimg">
                                 <img [src]="blog?.thumbnailPath">
                             </div>

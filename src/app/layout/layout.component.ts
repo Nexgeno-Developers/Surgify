@@ -155,8 +155,12 @@ https://www.youtube.com/shorts/ibNe6LcbeF4 */
     })
   }
 
-  openBookDialog() {
-    this.modalService.open(BookingComponent, { windowClass: 'appointment-modal ', modalDialogClass: 'modal-dialog-centered' });
+  openBookDialog(specialization?:any) {
+    const mod = this.modalService.open(BookingComponent, { windowClass: 'appointment-modal ', modalDialogClass: 'modal-dialog-centered' });
+    if(specialization){
+      let found = this.allSurgeries.find((sur)=> sur.name.toLowerCase()==specialization.toLowerCase());
+      mod.componentInstance.disease = found;
+    }
   }
 
 

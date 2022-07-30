@@ -7,6 +7,64 @@
             <ng-template ngbSlide>
                 <div class="container">
                     <div class="banner1 d-flex">
+                        <div class="left1 left1New">
+                            <div class="left1-inner">
+                                <h2>Looking for</h2>
+                                <h3>Second Opinion? / Hospitalisation? </h3>
+                                <div class="boxes3Head boxes3Head22">We are committed to care with the best team of doctors , advanced
+                                technology and an affordable healthcare for all !</div>
+
+                                <div class="homepaeTagLinks">
+                                    <a style="cursor: pointer" (click)="openBookDialog('Piles')">Piles</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Fistula')">Fistula</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Fissure')">Fissure</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Pilonidal Sinus')">Pilonidal Sinus</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Varicose Veins')">Varicose Veins</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Varicocele')">Varicocele</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Kidney Stone')">Kidney Stone</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Phimosis')">Phimosis</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Hydrocele')">Hydrocele</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Cataract')">Cataract</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Lasik')">Lasik</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Hernia')">Hernia</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Gallbladder')">Gallbladder</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Appendix')">Appendix</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Knee Replacement')">Knee Replacement</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Gynecomastia')">Gynecomastia</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Lipoma')">Lipoma</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Bariatric')">Bariatric</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Arthroscopy')">Arthroscopy</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Breast Cancer')">Breast Cancer</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Hip Replacement')">Hip Replacement</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Liposuction')">Liposuction</a>
+                                </div>
+
+                                <div class="action-row">
+                                    <a href="javascript:void(0);" class="bookAppLink btn btn-secondary btn-appointment"
+                                        data-toggle="modal" data-target="#appointment-modal"
+                                        (click)="openBookDialog()">Book Appointments</a>
+                                    <a href="javascript:void(0);" class="callIcon btn btn-white btn-call"><i
+                                            class="icon"><img src="assets/images/phoneIcon.svg"></i> 70398 20610</a>
+                                </div>
+                                <div class="action-row action-row-02">
+                                    <a href="javascript:void(0);" class="no-cost-emi btn btn-white" data-toggle="modal"
+                                        data-target="#appointment-modal">
+                                        <span>%</span> No Cost EMI Facility
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right1 right1New">
+                            <div class="bannerImg">
+                                <img src="assets/images/icon2-2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="container">
+                    <div class="banner1 d-flex">
                         <div class="left1">
                             <div class="left1-inner">
                                 <h2 style="white-space: nowrap;">Surgify is one-stop solution for surgeries</h2>
@@ -65,64 +123,6 @@
                     </div>
                 </div>
             </ng-template>
-            <ng-template ngbSlide>
-                <div class="container">
-                    <div class="banner1 d-flex">
-                        <div class="left1 left1New">
-                            <div class="left1-inner">
-                                <h2>Looking for</h2>
-                                <h3>Second Opinion? / Hospitalisation? </h3>
-                                <div class="boxes3Head boxes3Head22">We are committed to care with the best team of doctors , advanced
-                                technology and an affordable healthcare for all !</div>
-
-                                <div class="homepaeTagLinks">
-                                    <a href="">Piles</a>
-                                    <a href="">Fistula</a>
-                                    <a href="">Fissure</a>
-                                    <a href="">Pilonidal Sinus</a>
-                                    <a href="">Varicose Veins</a>
-                                    <a href="">Varicocele</a>
-                                    <a href="">Kidney Stone</a>
-                                    <a href="">Phimosis</a>
-                                    <a href="">Hydrocele</a>
-                                    <a href="">Cataract</a>
-                                    <a href="">Lasik</a>
-                                    <a href="">Hernia</a>
-                                    <a href="">Gallbladder</a>
-                                    <a href="">Appendix</a>
-                                    <a href="">Knee Replacement</a>
-                                    <a href="">Gynecomastia</a>
-                                    <a href="">Lipoma</a>
-                                    <a href="">Bariatric</a>
-                                    <a href="">Arthroscopy</a>
-                                    <a href="">Breast Cancer</a>
-                                    <a href="">Hip Replacement</a>
-                                    <a href="">Liposuction</a>
-                                </div>
-
-                                <div class="action-row">
-                                    <a href="javascript:void(0);" class="bookAppLink btn btn-secondary btn-appointment"
-                                        data-toggle="modal" data-target="#appointment-modal"
-                                        (click)="openBookDialog()">Book Appointments</a>
-                                    <a href="javascript:void(0);" class="callIcon btn btn-white btn-call"><i
-                                            class="icon"><img src="assets/images/phoneIcon.svg"></i> 70398 20610</a>
-                                </div>
-                                <div class="action-row action-row-02">
-                                    <a href="javascript:void(0);" class="no-cost-emi btn btn-white" data-toggle="modal"
-                                        data-target="#appointment-modal">
-                                        <span>%</span> No Cost EMI Facility
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right1 right1New">
-                            <div class="bannerImg">
-                                <img src="assets/images/icon2-2.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </ng-template>  
         </ngb-carousel>
     </section>
 

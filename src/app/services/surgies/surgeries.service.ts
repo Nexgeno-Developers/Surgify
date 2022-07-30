@@ -24,7 +24,7 @@ export class SurgeriesService {
     this.currentDisease = disease;
   }
 
-  getAllSurgeries(limit: number = 20, offset: number = 0, skip: number = 0) {
+  getAllSurgeries(limit: number = 100, offset: number = 0, skip: number = 0) {
     let filters = {
       "offset": offset,
       "limit": limit,

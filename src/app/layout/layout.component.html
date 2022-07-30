@@ -3,7 +3,7 @@
         Free Doctor Consultation
       </div>
     <section class="homeBanner">
-        <ngb-carousel *ngIf="showCar" [showNavigationIndicators]="false">
+        <ngb-carousel *ngIf="showCar" [showNavigationIndicators]="true" [interval]="50000">
             <ng-template ngbSlide>
                 <div class="container">
                     <div class="banner1 d-flex">
@@ -65,43 +65,41 @@
                     </div>
                 </div>
             </ng-template>
-            <!-- <ng-template ngbSlide>
+            <ng-template ngbSlide>
                 <div class="container">
                     <div class="banner1 d-flex">
-                        <div class="left1">
+                        <div class="left1 left1New">
                             <div class="left1-inner">
-                                <h2>Surgify = The spirit to care</h2>
-                                <h3>Complete <span>surgical care!!</span></h3>
-                                <div class="boxes3Head">Surgify is a one-stop solution for surgeries.</div>
-                                <ul class="boxes3 d-flex">
-                                    <li class="">
-                                        <span><img src="assets/images/icon1.svg"></span>
-                                        <div class="boxes3Text">Consult specialist doctors for surgery</div>
-                                    </li>
-                                    <li class="">
-                                        <span><img src="assets/images/icon2.svg"></span>
-                                        <div class="boxes3Text">Access to world class hospitals</div>
-                                    </li>
-                                    <li class="">
-                                        <span><img src="assets/images/icon3.svg"></span>
-                                        <div class="boxes3Text">Trustworthy Surgery centers</div>
-                                    </li>
-                                </ul>
-                                <ul class="boxes3-2 d-flex">
-                                    <li class="pr0">
-                                        <span>12,499+</span>
-                                        <div class="boxes3Text">Completed <span>Surgeries</span></div>
-                                    </li>
-                                    <li>
-                                        <span>110</span>
-                                        <div class="boxes3Text">Network <span>Hospitals</span></div>
-                                    </li>
-                                    <li>
-                                        <span>105</span>
-                                        <div class="boxes3Text">Experienced <span>Surgeons</span></div>
-                                    </li>
+                                <h2>Looking for</h2>
+                                <h3>Second Opinion? / Hospitalisation? </h3>
+                                <div class="boxes3Head boxes3Head22">We are committed to care with the best team of doctors , advanced
+                                technology and an affordable healthcare for all !</div>
 
-                                </ul>
+                                <div class="homepaeTagLinks">
+                                    <a href="">Piles</a>
+                                    <a href="">Fistula</a>
+                                    <a href="">Fissure</a>
+                                    <a href="">Pilonidal Sinus</a>
+                                    <a href="">Varicose Veins</a>
+                                    <a href="">Varicocele</a>
+                                    <a href="">Kidney Stone</a>
+                                    <a href="">Phimosis</a>
+                                    <a href="">Hydrocele</a>
+                                    <a href="">Cataract</a>
+                                    <a href="">Lasik</a>
+                                    <a href="">Hernia</a>
+                                    <a href="">Gallbladder</a>
+                                    <a href="">Appendix</a>
+                                    <a href="">Knee Replacement</a>
+                                    <a href="">Gynecomastia</a>
+                                    <a href="">Lipoma</a>
+                                    <a href="">Bariatric</a>
+                                    <a href="">Arthroscopy</a>
+                                    <a href="">Breast Cancer</a>
+                                    <a href="">Hip Replacement</a>
+                                    <a href="">Liposuction</a>
+                                </div>
+
                                 <div class="action-row">
                                     <a href="javascript:void(0);" class="bookAppLink btn btn-secondary btn-appointment"
                                         data-toggle="modal" data-target="#appointment-modal"
@@ -109,16 +107,22 @@
                                     <a href="javascript:void(0);" class="callIcon btn btn-white btn-call"><i
                                             class="icon"><img src="assets/images/phoneIcon.svg"></i> 70398 20610</a>
                                 </div>
+                                <div class="action-row action-row-02">
+                                    <a href="javascript:void(0);" class="no-cost-emi btn btn-white" data-toggle="modal"
+                                        data-target="#appointment-modal">
+                                        <span>%</span> No Cost EMI Facility
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="right1">
+                        <div class="right1 right1New">
                             <div class="bannerImg">
-                                <img src="assets/images/icon2.png">
+                                <img src="assets/images/icon2-2.png">
                             </div>
                         </div>
                     </div>
                 </div>
-            </ng-template> -->
+            </ng-template>  
         </ngb-carousel>
     </section>
 

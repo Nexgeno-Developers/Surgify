@@ -23,7 +23,7 @@
                                     <a href="javascript:void(0);" style="display: none;">Our <strong>Surgeries</strong></a>
                                 </li>
                                 <li [ngClass]="{'active': (router?.url?.indexOf('our-doctors')!=-1)}">
-                                    <a [routerLink]="'/our-doctors'" routerLinkActive="active">Our
+                                    <a [routerLink]="'/our-doctors'" routerLinkActive="active">Team of 
                                         <strong>Doctors</strong></a>
                                 </li>
 
@@ -32,7 +32,7 @@
                                     <ul class="outPaiSub">
                                         <li><a style="cursor: pointer;" (click)="askDoctor()">Ask Doctor</a></li>
                                         <li><a [routerLink]="'/community'" routerLinkActive="active">Community</a></li>
-                                        <li><a [routerLink]="'/blogs'" routerLinkActive="active">Blogs</a></li>
+                                        <li><a [routerLink]="'/blog'" routerLinkActive="active">Blog</a></li>
 
                                     </ul>
                                 </li>
@@ -44,7 +44,7 @@
                                     <a [routerLink]="'/simplify-surgery'">Simplifying <strong>Surgeries</strong></a>
                                 </li> -->
                                 <li class="ourPait" routerLinkActive="active">
-                                    <a href="javascript:void(0);">Team <strong>Surgify</strong></a>
+                                    <a href="javascript:void(0);">About <strong>Surgify</strong></a>
                                     <ul class="outPaiSub">
                                         <li><a [routerLink]="'/about-us'" routerLinkActive="active">About Us</a></li>
                                     </ul>
@@ -198,7 +198,7 @@
                         <li class="primary-navbar-item" routerLinkActive="active">
                             <div class="primary-navbar-item-inner">
                                 <a (click)="toggleMenu()" href="javascript:void(0);" class="primary-navbar-link"
-                                    [routerLink]="'/our-doctors'" routerLinkActive="active">Our
+                                    [routerLink]="'/our-doctors'" routerLinkActive="active">Team of 
                                     <strong>Doctors</strong></a>
                             </div>
                         </li>
@@ -227,7 +227,7 @@
                                             <li class="nav-item">
                                                 <a [routerLink]="'/community'" (click)="toggleMenu()">Community</a>
                                             </li>
-                                            <li><a [routerLink]="'/blogs'" (click)="toggleMenu()">Blogs</a></li>
+                                            <li><a [routerLink]="'/blog'" (click)="toggleMenu()">Blog</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -238,7 +238,7 @@
                                 <a href="javascript:void(0);" [ngClass]="topMenuClass('team-surgify')"
                                     (click)="toggleMenuMobile('team-surgify')"
                                     class="primary-navbar-link primary-navbar-link-dropdown" data-toggle="collapse"
-                                    data-target="#collapse-team-surgify" aria-controls="collapse-team-surgify">Team
+                                    data-target="#collapse-team-surgify" aria-controls="collapse-team-surgify">About
                                     <strong>Surgify</strong></a>
                                 <div class="collapse primary-child-navbar" [ngClass]="topMenuClass('team-surgify')"
                                     id="collapse-team-surgify">

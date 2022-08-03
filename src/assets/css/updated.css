@@ -154,7 +154,7 @@ select.form-control:not([size]):not([multiple]){height: auto;}
 
 @media screen and (max-width: 768px) {
   .popover{ width: 280px;}
-    .banner1 .right1New{ display: none;}
+  .banner1 .right1New{ display: none;}
 }
 
 
@@ -165,15 +165,25 @@ select.form-control:not([size]):not([multiple]){height: auto;}
   background: #fff;
   margin-bottom: 10px;
   margin-right: 10px;
-  border-radius: 20px;}
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-  .banner1 .left1New{width: 65%;}
-  .banner1 .right1New{ width: 35%; padding-left: 0; position: relative; bottom: -10px;}
+.blogsDetails .drBgtop{  height: 220px;}
 
-    .homeBanner{ padding-bottom: 0;}
-  .left1-inner{ padding-bottom: 40px;}
-    .banner1 .left1 .boxes3Head22{ font-weight: normal; margin-top: 20px;}
+.homepaeTagLinks a:hover, .blogTags a:hover{
+  background: #881543;
+  color: #fff !important;
+  box-shadow: 0 2px 3px rgba(0, 55, 132, .2);
+}
 
-        @media screen and (max-width: 768px)
+.banner1 .left1New{width: 65%;}
+.banner1 .right1New{ width: 35%; padding-left: 0; position: relative; bottom: -10px;}
 
+.homeBanner{ padding-bottom: 0;}
+.left1-inner{ padding-bottom: 40px;}
+.banner1 .left1 .boxes3Head22{ font-weight: normal; margin-top: 20px;}
+.welBox1{ cursor: pointer; }
+
+  
         

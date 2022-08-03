@@ -231,6 +231,8 @@ button { font-size: 1rem; line-height: inherit; padding: 0; margin: 0; border: 0
   background-color: #881543; border-radius: 17px; width: 34px; height: 34px; position: absolute; left: -1px; top: -1px; color: white;
 }
 
+.banner1 .left1 .action-row .btn.no-cost-emi.btn.btn-white:hover{ background: #003784; color: #fff;}
+
 /* .banner1 .left1 .action-row .btn.no-cost-emi.btn.btn-white:hover { color: white; }
 .banner1 .left1 .action-row .btn.no-cost-emi.btn.btn-white:hover span {  color: #881543;  background-color: white;} */
 .banner1 .left1 .action-row .btn.no-cost-emi.btn.btn-white {

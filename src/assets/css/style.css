@@ -510,7 +510,7 @@ text-align: center;
 .appointment-modal .appointment-left{background:url('assets/images/schedule-appointment-image.jpg') no-repeat center center; background-size:cover; width:50%; border-radius:10px 0 0 10px;}
 .appointment-modal .appointment-right{width:50%; padding:40px 40px 50px 50px;}
 .appointment-modal .appointment-title strong{ font-weight: 800 }
-.appointment-modal .form-group.animation .form-control{ font-weight: 600; font-size: 1.6em; color: #0B0D10 }
+.appointment-modal .form-group.animation .form-control{ font-weight: 600; font-size: 1.6em; color: #0B0D10; padding-right: 22px; }
 .appointment-modal .appointment-header{padding-bottom:20px;}
 .appointment-modal .appointment-title{font-size:20px; font-weight:600; color:#881543;}
 .appointment-modal .action-row{padding:0 25px; text-align:center; margin-top:40px;}

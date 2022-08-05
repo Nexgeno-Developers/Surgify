@@ -171,7 +171,7 @@ https://www.youtube.com/shorts/ibNe6LcbeF4 */
 
   setRandom() {
     let randomNums: number[] = [];
-    let len = this.allSurgeries.length - 1;
+    let len = this.allSurgeries.length - 1 - 8;
     // console.log(this.allSurgeries.length, this.randomSurgeries.length);
     for (let i = 0; randomNums.length <= len; i++) {
       let num = this.randomInteger(0, len);
@@ -182,6 +182,12 @@ https://www.youtube.com/shorts/ibNe6LcbeF4 */
 
     this.surgeriesPerfom = [];
     let tempAssign: any = [];
+    let list = ['Piles', 'Fissure', 'Fistula', 'Appendicitis Treatment ', 'Hernia Treatment', 'Cataract', 'Phimosis', 'Gallstone Treatment'];
+    list.forEach((sur) => {
+      let index = this.randomSurgeries.findIndex((s) => s.name.toLowerCase() == sur.toLowerCase());
+      tempAssign.push(this.randomSurgeries[index]);
+      this.randomSurgeries.splice(index, 1);
+    });
     randomNums.forEach((num) => {
       tempAssign.push(this.randomSurgeries[num]);
     });

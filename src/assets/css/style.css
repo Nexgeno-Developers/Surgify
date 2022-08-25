@@ -1115,3 +1115,6 @@ background-color:#fff;
 .videoListDropBox .selectCityBox{ padding-left: 0;  }
 
 .homepage .carousel-indicators{ border: 0;}
+
+.fotWhats{ position: fixed; right: 20px; bottom: 40px; width: 50px; z-index: 9999;}
+.fotWhats img{ width: 100%; height: auto;}

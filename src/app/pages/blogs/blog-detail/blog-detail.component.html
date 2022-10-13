@@ -24,7 +24,10 @@
                         <span>{{blogData?.created | date: 'dd MMM YYYY'}}</span> <b>Surgify Team</b>
                     </div>
                     <pre>
-                        <p>{{blogData?.content}}</p>
+                         <!-- <p>{{blogData?.content}}</p>  -->
+                        <div [innerHTML]="myData" class='blogApiTxt'>
+                            
+                        </div>
                     </pre>
                     <!-- <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Sed metus nunc,
                         accumsan ultricies orci eget, maximus tristique leo. Aliquam a lacus eget urna auctor placerat

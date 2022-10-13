@@ -1075,7 +1075,11 @@ background-color:#fff;
 .blogDate{ font-size: 14px; padding-bottom: 20px;}
 .blogDate span{ color: #717780; display: inline-block; padding-right: 20px; }
 .blogDate b{ color: #881543; }
-.blogConta p, .blogConta pre p{ padding-bottom: 20px;   line-height: 1.86;letter-spacing: 0.14px;  color: #0b0d10;}
+.blogConta p, .blogConta pre p, .blogConta pre .blogApiTxt{ padding-bottom: 20px;   line-height: 1.86;letter-spacing: 0.14px;  color: #0b0d10;}
+.blogConta pre .blogApiTxt{
+      font-size: 1.4em;
+}
+.blogConta pre .blogApiTxt strong{ font-weight:bold}
 .blogConta p strong, .blogConta pre p strong{ font-weight: 600; }
 .blogConta pre {    white-space: pre-wrap;}
 
@@ -1118,3 +1122,4 @@ background-color:#fff;
 
 .fotWhats{ position: fixed; right: 20px; bottom: 40px; width: 50px; z-index: 9999;}
 .fotWhats img{ width: 100%; height: auto;}
+

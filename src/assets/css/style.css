@@ -1123,3 +1123,10 @@ background-color:#fff;
 .fotWhats{ position: fixed; right: 20px; bottom: 40px; width: 50px; z-index: 9999;}
 .fotWhats img{ width: 100%; height: auto;}
 
+.blogApiTxt p{
+  font-size: 1em;
+  display: inline-block;
+  width: 100%;
+}
+.blogApiTxt p storng{ font-weight: bold; font-size: 1.2em;}
+.blog-post .featured-image img{ width: 100%;}

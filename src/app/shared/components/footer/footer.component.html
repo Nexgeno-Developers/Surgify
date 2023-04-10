@@ -1,0 +1,146 @@
+<footer class="surgify-footer">
+    <div class="surgify-main-footer">
+        <div class="container">
+            <div class="footer-container d-flex">
+                <div class="footer-left">
+                    <img src="assets/images/surgify-footer-logo.png" alt="">
+                </div>
+                <div class="footer-right" style="width:100%">
+                    <div class="footer-col">
+                        <div class="footer-links-container">
+                            <h3 class="footer-links-title" (click)="toggleHelpMenu('home')">
+                                <a href="javascript:void(0)" class="arrow">Home</a>
+                            </h3>
+                            <div class="footer-links-wrap" id="footer-collapse-home" [@slideInOut]="toggleData?.home">
+                                <ul class="footer-links">
+                                    <li>
+                                        <a [routerLink]="'/simplify-surgery'">About us</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="javascript:void(0);">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Careers</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Media</a>
+                                    </li> 
+                                    <li>
+                                        <a href="javascript:void(0);">Contact us</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-links-container">
+                            <h3 class="footer-links-title" (click)="toggleHelpMenu('patients')">
+                                <a href="javascript:void(0);" class="arrow">For Patients</a>
+                            </h3>
+                            <div class="footer-links-wrap" id="footer-collapse-Patients" [@slideInOut]="toggleData?.patients">
+                                <ul class="footer-links">
+                                    <!-- <li>
+                                        <a href="javascript:void(0);">Online Consultation</a>
+                                    </li> -->
+                                    <li>
+                                        <a href="javascript:void(0);" (click)="askDoctor()">Ask Doctor</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="'/community'">Community</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="javascript:void(0);">Reviews</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Videos</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Faq's</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <div class="row">
+                            <div class="footer-links-container col-lg-3 col-md-4 col-sm-12" *ngFor="let speciality of specialities">
+                                <h3 class="footer-links-title" (click)="toggleHelpMenu(speciality.name)">
+                                    <a href="javascript:void(0)" class="arrow"
+                                        > {{speciality.name}}</a>
+                                </h3>
+                                <div class="footer-links-wrap" id="footer-collapse-proctology" [@slideInOut]="toggleData[speciality.name]">
+                                    <ul class="footer-links">
+                                        <li *ngFor="let surgery of speciality?.surgeries">
+                                            <a [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+
+                 
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="surgify-secondary-footer">
+        <div class="container">
+            <div class="surgify-secondary-container d-flex">
+                <div class="footer-secondary-left">
+                    <ul class="footer-social d-flex">
+                        <li>
+                            <a href="https://www.facebook.com/Surgifyhasslefree" target="_blank">
+                                <img src="assets/images/facebook.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/surgify/" target="_blank">
+                                <img src="assets/images/instagram.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/surgify-hasslefree/" target="_blank">
+                                <img src="assets/images/linkedin.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/AdsSurgify" target="_blank">
+                                <img src="assets/images/twitter.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCo_w7I-Kh5gq_eGv-UzuphQ" target="_blank">
+                                <img src="assets/images/youtube.svg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-secondary-right">
+                    <ul class="footer-term-link d-flex">
+                        <!-- <li>
+                            <a href="javascript:void(0);">Terms & Conditions</a>
+                        </li> -->
+                        
+                        <li>
+                            <a href="/privacy-policy" target="_blank">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="surgify-copyright-footer text-center">
+        <div class="container">
+            <p>All Rights Reserved. RI Healthcare Pvt. ltd. 2021</p>
+        </div>
+    </div>
+</footer>
+
+
+<div class="fotWhats">
+    <a href="https://api.whatsapp.com/send?phone=918879717532" target="_blank"><img src="assets/images/whatsapp.png"></a>
+</div>

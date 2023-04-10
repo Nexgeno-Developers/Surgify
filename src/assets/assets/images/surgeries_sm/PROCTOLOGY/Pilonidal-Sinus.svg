@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104.658" height="43.986" viewBox="0 0 104.658 43.986">
+    <defs>
+        <clipPath id="fsu6tyqrfa">
+            <path data-name="Rectangle 1427" style="fill:none" d="M0 0h104.658v43.986H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Group 4972" style="clip-path:url(#fsu6tyqrfa)">
+        <path data-name="Path 3058" d="m1 19.552 21.112.325c.361.006 6.754-.575 7.109-.64 1.594-.29 4.115-.713 8.64-3.549 7.506-4.7 9.84-7.59 12.837-7.341v7.523s-12.653 4.273-12.41 15.02c.3 13.318 14.036 13.1 14.036 13.1s16.324.223 15.433-15.093c-.545-9.354-11.81-13.209-11.81-13.209V8.437s4.292.764 9.818 5.468c5.109 4.35 11.029 6.052 18.9 6.052 8.82 0 19.98-.5 19.98-.5v-3.543s-21.827 1.552-27.96-.79a41.8 41.8 0 0 1-12.466-8.012s-4.463-3.183-8.709-3.184a34.379 34.379 0 0 0-5.681.188c-3.684.271-13.584 8.011-18.8 10.249C24.937 16.975 1 15.551 1 15.551z" style="fill:#d6f0fc"/>
+        <path data-name="Path 3059" d="m0 13.389 21.6-.125s8.116.125 14.36-4.495C43.088 3.5 47.705.528 50.7.777V12.7s-12.48 4.05-12.237 14.8c.3 13.318 13.859 13.318 13.859 13.318s16.5 0 15.61-15.316c-.545-9.354-12.987-12.986-12.987-12.986V.76s8.019 1.266 13 5.761 10.725 5.994 17.468 6.244 19.23 0 19.23 0" style="stroke-miterlimit:10;stroke:#003884;stroke-width:1.3px;fill:none"/>
+        <path data-name="Path 3060" d="M49.739 18.384s-5.8 3.347-4.771 9.951c1.022 6.542 7.361 6.542 7.361 6.542" style="stroke:#902946;stroke-width:2px;stroke-miterlimit:10;fill:none"/>
+        <path data-name="Path 3061" d="M48.421 22.493a9.456 9.456 0 0 1 11.225 3.545" style="stroke:#902946;stroke-width:2px;stroke-miterlimit:10;fill:none"/>
+        <path data-name="Path 3062" d="M42.365 29.844a8.865 8.865 0 0 0 10.657-1.182" style="stroke:#902946;stroke-width:2px;stroke-miterlimit:10;fill:none"/>
+        <path data-name="Path 3063" d="M55.51 35.6s5.76.041 7.385-4.484a8.309 8.309 0 0 0-1.034-7.775" style="stroke:#902946;stroke-width:2px;stroke-miterlimit:10;fill:none"/>
+        <path data-name="Path 3064" d="M59.466 18.619s-6.91 3.4-3.955 11.964" style="stroke:#902946;stroke-width:2px;stroke-miterlimit:10;fill:none"/>
+    </g>
+</svg>

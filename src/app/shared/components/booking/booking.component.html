@@ -1,0 +1,78 @@
+<div class="appointment-container d-flex">
+  <div class="appointment-left"></div>
+  <div class="appointment-right">
+    <div class="appointment-header">
+      <h3 class="appointment-title" *ngIf="!isSubmitSuccess">Schedule Your Appointment {{doctor?.title}}
+        {{doctor?.name}}</h3>
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close" (click)="activeModal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="appointment-body">
+      <form class="appointment-form" [formGroup]="bookingForm" *ngIf="!isSubmitSuccess">
+        <div class="form-group animation">
+          <input type="text" class="form-control" placeholder="Name" id="" aria-describedby="emailHelp"
+            formControlName="patientName">
+          <label for="" class="form-label">Patient Name</label>
+          <div class="FL inError" *ngIf="hasError('patientName', 'required')">Patient Name is mandatory</div>
+        </div>
+        <div class="form-group animation">
+          <input type="tel" class="form-control" maxlength="10" placeholder="Mobile No" id=""
+            aria-describedby="emailHelp" formControlName="mobileNo">
+          <label for="" class="form-label">Mobile No</label>
+          <div class="FL inError" *ngIf="hasError('mobileNo', 'required')">Mobile No is mandatory</div>
+          <div class="FL inError" *ngIf="hasError('mobileNo', 'pattern')">Enter 10 digits only</div>
+        </div>
+        <div class="form-group animation">
+          <input type="email" class="form-control" placeholder="Email" id="" aria-describedby="emailHelp"
+            formControlName="email">
+          <label for="" class="form-label">Email</label>
+          <div class="FL inError" *ngIf="hasError('email', 'required')">Email is mandatory</div>
+          <div class="FL inError" *ngIf="hasError('email', 'email')">Incorrect Email format</div>
+        </div>
+        <div class="form-group animation">
+          <!-- <input type="email" class="form-control" placeholder="Select Disease" id="" aria-describedby="emailHelp"
+            formControlName="disease"> -->
+          <select class="form-control" formControlName="disease">
+            <option selected value="">Select Disease</option>
+            <option *ngFor="let disease of diseases;" [value]="disease.id">{{disease?.name}}</option>
+          </select>
+          <label for="" class="form-label">Select Disease</label>
+          <div class="FL inError" *ngIf="hasError('disease', 'required')">Disease is mandatory</div>
+        </div>
+        <div class="action-row">
+          <button type="submit" class="btn btn-secondary btn-block" (click)="bookMyAppointment()"
+            [disabled]="bookingForm.invalid">Book
+            Appointment</button>
+          <div class="note">Booking an appointment you agree to<br>our <a href="/privacy-policy" target="_blank">Privacy
+              Policy</a>.
+          </div>
+        </div>
+      </form>
+      <div class="forgotThankBox" *ngIf="isSubmitSuccess">
+        <!-- <div class="city-header text-center">
+          <h3 class="city-title">&nbsp;</h3>
+          <button type="button" class="modal-close" (click)="activeModal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+
+        <div class="thankApp">
+          <form class=" ">
+
+            <div class="fotThaTxt"> <img src="assets/images/greenCheck2.svg" class="genCheck">
+
+              <p>Thank you for<br /> contacting <span> Surgify.</span></p>
+              <div class="thankSm">Our representative will contact you shortly</div>
+
+              <div class="thankAppQue"><b>Any quires write to us at </b></div>
+              <a href="mailto:prasad@surgify.in">prasad@surgify.in</a>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

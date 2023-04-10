@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="275" height="243.205" viewBox="0 0 275 243.205">
+  <defs>
+    <filter id="NoPath_-_Copy_10_" x="0" y="0" width="275" height="243.205" filterUnits="userSpaceOnUse">
+      <feOffset dx="14" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-color="#7a0f3a"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#NoPath_-_Copy_10_)">
+    <path id="NoPath_-_Copy_10_2" data-name="NoPath - Copy (10)" d="M647.593,332.581,635.2,340.359l-7.368-12.667c-18.747-32.347-58.615-46.713-91.834-29.973-38.1,19.19-51.619,67.222-30.651,103.436l72.336,124.594a16.175,16.175,0,0,0,22.719,5.609l121.64-76.606c35.408-22.273,45.611-71.107,20.748-105.891C721.088,318.561,679.216,312.7,647.593,332.581Z" transform="translate(-495.49 -290.68)" fill="#a1174e"/>
+  </g>
+</svg>

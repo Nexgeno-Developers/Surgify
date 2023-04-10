@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.002" height="42.476" viewBox="0 0 44.002 42.476">
+  <g id="Group_5000" data-name="Group 5000" transform="translate(-112.986 -342)">
+    <path id="Path_2929" data-name="Path 2929" d="M0,0H42.476V42.476H0Z" transform="translate(112.986 342)" fill="#717780" opacity="0"/>
+    <path id="Path_3151" data-name="Path 3151" d="M45740.961,45350.766v-12.1h-1.93a7.759,7.759,0,0,1-7.516-5.773h-3.152a6.742,6.742,0,1,1,0-13.484h25.184a6.742,6.742,0,1,1,0,13.484h-1.211a7.754,7.754,0,0,1-7.508,5.773h-2.234v12.1a.8.8,0,0,1-.809.82A.811.811,0,0,1,45740.961,45350.766Z" transform="translate(-45603.352 -44972.016)" fill="#d6f0fc"/>
+    <g id="Group_5015" data-name="Group 5015" transform="translate(114.975 347.403)">
+      <path id="Rectangle_1443_-_Outline" data-name="Rectangle 1443 - Outline" d="M6.78,1.925a4.812,4.812,0,1,0,0,9.625H31.963a4.812,4.812,0,1,0,0-9.625H6.78M6.78,0H31.963a6.737,6.737,0,1,1,0,13.475H6.78A6.737,6.737,0,1,1,6.78,0Z" transform="translate(0)" fill="#003784"/>
+      <path id="Rectangle_1444_-_Outline" data-name="Rectangle 1444 - Outline" d="M2.255,1.925A5.785,5.785,0,0,0,7.7,5.775h5.775a5.785,5.785,0,0,0,5.445-3.85H2.255M0,0H21.174a7.7,7.7,0,0,1-7.7,7.7H7.7A7.7,7.7,0,0,1,0,0Z" transform="translate(9.76 11.55)" fill="#003784"/>
+      <path id="Path_3055" data-name="Path 3055" d="M0,0H1.634V13.886a.817.817,0,0,1-1.634,0Z" transform="translate(19.377 17.47)" fill="#003784"/>
+    </g>
+  </g>
+</svg>

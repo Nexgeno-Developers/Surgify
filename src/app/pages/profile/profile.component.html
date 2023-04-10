@@ -1,0 +1,335 @@
+<div class="drDetailsTop">
+    <div class="drBgtop"></div>
+    <div class="containerMain">
+        <div class="container">
+            <div class="drdetMain">
+
+                <div class="drDetimg drDetimg2">
+                    <div class="drNameBg">
+                        {{chars}}
+                    </div>
+                </div>
+                <div class="drListTxt">
+
+                    <div class="drName drName2">
+                        <strong>{{user?.fullName}}</strong>
+                    </div>
+
+                    <div class="drProBox">
+                        <div class="drExpMain">
+                            <div class="drExp">
+                                <p>Email id (User Name)</p>
+                                <strong>{{user?.email}}</strong>
+                            </div>
+
+                            <div class="drExp">
+                                <p>Mobile No</p>
+                                <strong>{{user?.mobileNo}} <a href="javascript:void(0);" class="changeLink"
+                                        href="javascript:void(0);"><img src="assets/images/editIcon.svg"
+                                            (click)="openChangeMobNumModal(forgotBox)"></a></strong>
+                            </div>
+                        </div>
+
+                        <div class="drExpMain drExpMain2">
+                            <div class="drExp">
+                                <a href="javascript:void(0);" class="changeLink" href="javascript:void(0);"
+                                    (click)="openChangePwd(changePwdModal)">Change
+                                    Password</a>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <a href="/ask-doctor" class="bookAppLink btn btn-secondary btn-appointment" data-toggle="modal"
+                        data-target="#appointment-modal" tabindex="0">Ask Doctor</a>
+                    <div class="clear"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="clears"></div>
+
+<div class="drAbout">
+    <div class="container">
+
+        <div class="drAboutDetails" *ngIf="!isEdit">
+
+            <h3>Other Details <a style="margin-left: 20px; cursor: pointer;" (click)="editProfile()"><img
+                        src="assets/images/editIcon.svg"></a></h3>
+
+            <div class="drPrForum">
+                <ul>
+                    <li style="width: 50%" class="FL">
+                        <div class="form-group animation">
+                            <span class="drProAct">{{user?.country}}</span>
+                            <label for="" class="form-label">Country</label>
+                        </div>
+                    </li>
+                    <li style="width: 50%" class="FL">
+
+                        <div class="form-group animation">
+                            <span class="drProAct">{{user?.state}}</span>
+                            <label for="" class="form-label">State</label>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                    <li>
+                        <div class="form-group animation">
+                            <span class="drProAct">{{user?.city}}</span>
+                            <label for="" class="form-label">City</label>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="form-group animation">
+                            <span class="drProAct" style="text-transform: capitalize;">{{user?.gender}}</span>
+                            <label for="" class="form-label">Gender</label>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="drAboutDetails" *ngIf="isEdit">
+
+            <h3>Tell me More about you?</h3>
+
+            <div class="drPrForum">
+                <form [formGroup]="profileForm">
+                    <ul>
+                        <li>
+                            <div class="form-group animation">
+                                <select class="form-group" formControlName="country">
+                                    <option value="">Select Country</option>
+                                    <option value="India">India</option>
+                                </select>
+                                <label for="" class="form-label">Country</label>
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="form-group animation">
+                                <select class="form-group" formControlName="state">
+                                    <option value="">Select State</option>
+                                    <option value="Telangana">Telangana</option>
+                                </select>
+                                <label for="" class="form-label">State</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-group animation">
+                                <input type="text" class="form-control" placeholder="Select City" id=""
+                                    value="Select City" formControlName="city">
+                                <label for="" class="form-label">City</label>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="" class="form-label">Gender</label>
+                            <div>
+                                <label class="radioCustom">
+                                    <input type="radio" name="gender" formControlName="gender" [value]="'male'">
+                                    <span class="checkmark"></span>Male
+                                </label>
+                                <label class="radioCustom">
+                                    <input type="radio" name="gender" formControlName="gender" [value]="'female'">
+                                    <span class="checkmark"></span>Female
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="btn btn-secondary savePro" (click)="saveProfile()">Save
+                                my profile</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<ng-template #forgotBox let-modal>
+    <div class="forgotBox">
+        <div class="city-header text-center">
+            <h3 class="city-title">Change Mobile Number</h3>
+            <button type="button" class="modal-close" (click)="modalService.dismissAll()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="loginTxt">
+
+            <div class="appointment-body">
+                <form class="appointment-form" [formGroup]="changeMobileForm">
+
+                    <div class="form-group animation">
+                        <input type="text" class="form-control" placeholder="Current Mobile number" name="mobileNum"
+                            formControlName="currentNum" readonly>
+                        <label for="mobileNum" class="form-label">Current Mobile number</label>
+                        <div class="FL inError" *ngIf="hasError('currentNum', 'required')">Mobile No is mandatory</div>
+                        <div class="FL inError" *ngIf="hasError('currentNum', 'pattern')">Enter 10 digits only</div>
+                        <div class="FL inError"
+                            *ngIf=" (changeMobileForm.get('currentNum')?.value?.length==10) && changeMobileForm.get('currentNum')?.touched && (user?.mobileNo != (changeMobileForm.get('currentNum')?.value) ) ">
+                            Mobile No not matching</div>
+                    </div>
+                    <div class="form-group animation">
+                        <input type="text" class="form-control" maxlength="10" placeholder="New Mobile No" name="newNum"
+                            formControlName="newNum">
+                        <label for="newNum" class="form-label">New Mobile No</label>
+                        <div class="FL inError" *ngIf="hasError('newNum', 'pattern')">Enter 10 digits only</div>
+                        <div class="FL inError" *ngIf="hasError('newNum', 'required')">Mobile No is mandatory</div>
+                    </div>
+
+                    <div class="action-row">
+                        <button type="submit" class="btn btn-secondary btn-block" (click)="updateMobileNum()">Change My
+                            Mobile no</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #numberUpdatedTemplate>
+    <div class="forgotThankBox">
+        <div class="city-header text-center">
+            <h3 class="city-title">&nbsp;</h3>
+            <button type="button" class="modal-close" (click)="modalService.dismissAll()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="loginTxt">
+
+            <div class=" ">
+                <form class=" ">
+
+                    <div class="fotThaTxt"> <img src="assets/images/greenCheck.svg" class="genCheck">
+                        Your mobile number has been changed successfully
+
+                    </div>
+                    <!-- <div class="action-row">
+                        <button type="submit" class="btn btnBack btn-secondary btn-block">Login Now</button>
+                    </div> -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #changePwdModal>
+    <div class="forgotBox">
+        <div class="city-header text-center">
+            <h3 class="city-title">Change Password</h3>
+            <button type="button" class="modal-close" (click)="modalService.dismissAll()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="loginTxt">
+            <div class="appointment-body">
+                <form class="appointment-form" [formGroup]="changePwdForm">
+
+                    <div class="form-group animation">
+                        <a href="javascript:void(0)" class="eyeCross" (click)="showPassword=!showPassword"
+                            *ngIf="!showPassword"></a>
+                        <a href="javascript:void(0)" class="eyeCross2" (click)="showPassword=!showPassword"
+                            *ngIf="showPassword"></a>
+                        <input type="Password" [attr.type]="showPassword?'text':'password'" class="form-control"
+                            name="currPwd" placeholder="Password" formControlName="password">
+                        <label for="currPwd" class="form-label">Existing Password</label>
+                        <div class="FL inError" *ngIf="hasPwdFormError('password', 'required')">Password is required
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="form-group animation">
+                        <a href="javascript:void(0)" class="eyeCross" (click)="showPassword=!showPassword"
+                            *ngIf="!showPassword"></a>
+                        <a href="javascript:void(0)" class="eyeCross2" (click)="showPassword=!showPassword"
+                            *ngIf="showPassword"></a>
+                        <input type="Password" [attr.type]="showPassword?'text':'password'" class="form-control"
+                            name="newPwd" placeholder="Password" formControlName="confirmPassword" (focus)="showSuggestion=true" 
+                            (focusout)="showSuggestion=false"
+                            [ngClass]="{'error': hasError('password', 'required')}">
+
+                        <label for="newPwd" class="form-label">New Password</label>
+                        <div class="FL inError" *ngIf="hasPwdFormError('password', 'required')">Password is required
+                        </div>
+                        <div class="FL inError" *ngIf="(changePwdForm.get('confirmPassword')?.touched && changePwdForm.get('confirmNewPwd')?.touched) 
+                        && changePwdForm.get('confirmPassword')?.value != changePwdForm.get('confirmNewPwd')?.value">
+                            Password is not matching</div>
+                        <div class="listDrop" *ngIf="showSuggestion">
+                            At least 8 characters <br />
+                            A mixture of both uppercase and lowercase letters. <br />
+                            A mixture of letters and numbers. <br />
+                            One special character, e.g., ! @ # ? ]
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="form-group animation">
+                        <a href="javascript:void(0)" class="eyeCross" (click)="showPassword=!showPassword"
+                            *ngIf="!showPassword"></a>
+                        <a href="javascript:void(0)" class="eyeCross2" (click)="showPassword=!showPassword"
+                            *ngIf="showPassword"></a>
+                        <input type="Password" [attr.type]="showPassword?'text':'password'" class="form-control"
+                            name="newPwd1" placeholder="Password" formControlName="confirmNewPwd">
+                        <label for="newPwd1" class="form-label">Confirm Password</label>
+                        <div class="FL inError" *ngIf="hasPwdFormError('password', 'required')">Password is required
+                        </div>
+                        <div class="FL inError" *ngIf="(changePwdForm.get('confirmPassword')?.touched && changePwdForm.get('confirmNewPwd')?.touched) 
+                        && changePwdForm.get('confirmPassword')?.value != changePwdForm.get('confirmNewPwd')?.value">
+                            Password is not matching</div>
+                        <div class="clear"></div>
+                        <div class="FL inError" *ngIf="changePwdError">{{changePwdError}} </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button type="submit" class="btn btn-secondary btn-block"
+                            [disabled]="(changePwdForm?.invalid)" (click)="changePassword(passwordChangedModal)">Change My Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #passwordChangedModal let-modal>
+    <div class="forgotThankBox">
+        <div class="city-header text-center">
+            <h3 class="city-title">&nbsp;</h3>
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close" (click)="onModalClose()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="loginTxt">
+
+            <div class=" ">
+                <form class=" ">
+
+                    <div class="fotThaTxt"> <img src="assets/images/greenCheck.svg" class="genCheck">
+                        Your password has been changed successfully
+
+                    </div>
+                    <div class="action-row">
+                        <button type="submit" class="btn btnBack btn-secondary btn-block" (click)="loginNow()">Login Now</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-template>

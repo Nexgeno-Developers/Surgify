@@ -1,0 +1,60 @@
+<div class="city-container">
+    <div class="city-header text-center">
+        <h3 class="city-title">Sign up</h3>
+        <button type="button" class="modal-close" (click)="activeModal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="loginTxt">
+
+        <div class="">
+            <form class="appointment-form" [formGroup]="signUpForm">
+                <div class="form-group animation">
+                    <input type="text" class="form-control" placeholder="Name" id="fullName" formControlName="fullName"
+                        [ngClass]="{'error': hasError('fullName', 'required')}">
+                    <label for="" class="form-label">Full Name</label>
+                    <div class="FL inError" *ngIf="hasError('fullName', 'required')">Full Name is mandatory</div>
+                </div>
+                <div class="form-group animation">
+                    <input type="email" class="form-control" placeholder="Email" id="email" formControlName="email"
+                    [ngClass]="{'error': hasError('email', 'required')}">
+                    <label for="" class="form-label">Email</label>
+                    <div class="FL inError" *ngIf="hasError('email', 'required')">Email is mandatory</div>
+                    <div class="FL inError" *ngIf="hasError('email', 'email')">Incorrect Email format</div>
+                </div>
+                <div class="form-group animation">
+                    <input type="text" class="form-control" placeholder="Mobile No" id="mobileNo"
+                        formControlName="mobileNo" [ngClass]="{'error': hasError('mobileNo', 'required')}">
+                    <label for="" class="form-label">Mobile No</label>
+                    <div class="FL inError" *ngIf="hasError('mobileNo', 'required')">Mobile No is mandatory</div>
+                    <div class="FL inError" *ngIf="hasError('mobileNo', 'pattern')">Enter 10 digits only</div>
+                </div>
+                <div class="form-group animation">
+                    <a href="javascript:void(0)" class="eyeCross" (click)="showPassword=!showPassword"
+                        *ngIf="!showPassword"></a>
+                    <a href="javascript:void(0)" class="eyeCross2" (click)="showPassword=!showPassword"
+                        *ngIf="showPassword"></a>
+                    <input type="Password" [attr.type]="showPassword?'text':'password'" class="form-control" name=""
+                        placeholder="Password" formControlName="password" (focus)="showSuggestion=true"
+                        (focusout)="showSuggestion=false" [ngClass]="{'error': hasError('password', 'required')}">
+                    <label for="" class="form-label">Password</label>
+                    <div class="FL inError" *ngIf="hasError('password', 'required')">Password is mandatory</div>
+                    <div class="listDrop" *ngIf="showSuggestion">
+                        At least 8 characters <br />
+                        A mixture of both uppercase and lowercase letters. <br />
+                        A mixture of letters and numbers. <br />
+                        One special character, e.g., ! @ # ? ]
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="action-row">
+                    <button type="submit" class="btn btn-secondary btn-block" (click)="signUp()"
+                        [disabled]="signUpForm.invalid">Create my
+                        Account</button>
+                    <div class="note">Already registred <a href="javascript:void(0);" (click)="openLogin()">Login</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

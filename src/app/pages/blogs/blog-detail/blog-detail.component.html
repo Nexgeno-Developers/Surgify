@@ -1,0 +1,78 @@
+<div class="drDetailsTop blogsDetails">
+    <div class="drBgtop"></div>
+    <div class="containerMain">
+        <div class="container">
+            <div class="blogsLeft" *ngIf="loading">
+                <div class="loaderBox">
+                    <img src="assets/images/loader.svg">
+                    <p>Loading...</p>
+                </div>
+            </div>
+
+
+            <div class="blogsLeft" *ngIf="!loading">
+                <h1>{{blogData?.title}}</h1>
+                <a href="/blog" class="backBtn">Back</a>
+                <div class="clear"></div>
+
+                <div class="blogBigImg">
+                    <img [src]="blogData?.detailPath">
+                </div>
+
+                <div class="blogConta">
+                    <div class="blogDate">
+                        <span>{{blogData?.created | date: 'dd MMM YYYY'}}</span> <b>Surgify Team</b>
+                    </div>
+                    <pre>
+                         <!-- <p>{{blogData?.content}}</p>  -->
+                        <div [innerHTML]="myData" class='blogApiTxt'>
+                            
+                        </div>
+                    </pre>
+                    <!-- <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Sed metus nunc,
+                        accumsan ultricies orci eget, maximus tristique leo. Aliquam a lacus eget urna auctor placerat
+                        sit amet vitae neque. Donec nec laoreet augue, ut aliquam orci. Nullam leo enim, rutrum eget sem
+                        vitae, blandit sagittis libero. Morbi eleifend libero vel eros efficitur consequat. In quis
+                        tortor vitae sem accumsan ultricies eget ullamcorper ante. Nulla facilisi. Ut tincidunt
+                        ultricies metus.</p>
+
+                    <p>Praesent in lectus metus. Integer eu lacinia sapien. Nunc vel dui enim. Aenean vel congue purus.
+                        Nam vitae ipsum ex. Morbi convallis sollicitudin urna, ut sagittis lacus vehicula sed. Etiam non
+                        porttitor velit.</p>
+                    <p>Lectus metus. Integer eu lacinia sapien. Nunc vel dui enim. Aenean vel congue purus. Nam vitae
+                        ipsum ex. Morbi convallis sollicitudin urna, ut sagittis lacus vehicula sed. Etiam non porttitor
+                        velit.</p> -->
+
+                    <div class="blogTags">
+                        Tags <a *ngFor="let tag of blogData?.tags">{{tag}}</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--  -->
+            <div class="blogsRight">
+                <h2>Popular Posts</h2>
+
+                <ul>
+                    <li *ngFor="let blog of otherBlogs">
+                        <a routerLink="{{'/blog/'+blog?.slug}}" class="blodRigList">
+                            <div class="blodRigListimg">
+                                <img [src]="blog?.thumbnailPath">
+                            </div>
+                            <div class="blodRigListTxt">
+                                <b>{{blog?.created | date: 'dd MMM YYYY'}}</b>
+                                <p>{{blog?.title}}</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

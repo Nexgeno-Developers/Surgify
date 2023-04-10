@@ -1,0 +1,71 @@
+<div class="homepage">
+    <section class="homeBanner homeBannerInn">
+        <ul class="homeBan">
+            <li class="innerBanner innerBannerDr">
+                <div class="container">
+                    <div class="innerBannerTxt">
+                        <h3>Highly Experienced</h3>
+                        <h4>Team of Surgify Doctors</h4>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <div class="searchBox">
+        <div class="containerMain">
+
+            <div class="container">
+                <div class="selectCity">
+                    <div class="selectCityBox">
+                        <div class="searchmapIcon"></div>
+                        <select [(ngModel)]="selectedLoc">
+                            <option selected value="">All</option>
+                            <option *ngFor="let loc of locations" [value]="loc">{{loc}}</option>
+                            <!-- <option>Delhi</option>
+                            <option>Thane</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="searchInput">
+                    <a href="javascript:void(0)" class="searchBtn"><img src="assets/images/searchIcon.svg"></a>
+                    <input type="text" name="" value="" placeholder="Search by Doctors / Surgeries" class="form-control"
+                        [(ngModel)]="searchText">
+                    <a href="javascript:void(0)" class="searchArrow" (click)="findDocs()"
+                        [ngClass]="{'searchArrow2': searchText.length>0}"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="clears"></div>
+
+    <div class="drListing">
+        <div class="container">
+            <div class="searchHead" *ngIf="!isLoading && textSearch && showResults">
+                Search Result for <span>{{textSearch}}</span>
+            </div>
+            <ul class="row" *ngIf="!isLoading">
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12" *ngFor="let doctor of doctors">
+                    <app-doctors-summary [doctor]="doctor"></app-doctors-summary>
+                </li>
+            </ul>
+            <div class="loaderBox" *ngIf="isLoading">
+                <img src="assets/images/loader.svg">
+                <p>Loading...</p>
+            </div>
+
+            <div class="searchNoResult" *ngIf="!isLoading && doctors.length==0">
+                <div class="container">
+                    <img src="assets/images/searchnoResult.svg">
+                    <h4>
+                        No Result found for <span>{{textSearch}}</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-why-surgify></app-why-surgify>
+<app-book-appointment></app-book-appointment>

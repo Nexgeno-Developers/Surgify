@@ -1,0 +1,28 @@
+<div class="drListBox" (click)="goToDocDetails()">
+    <div class="drListImg">
+        <img [src]="(doctor?.image?.indexOf('assets') != -1)?(doctor?.image): 'assets/images/not_found/image-not-available-doctors.svg'">
+    </div>
+    <div class="drListTxt">
+
+        <div class="drName">
+            <strong>{{(doctor?.title+' '+doctor?.name)}}</strong>
+            <span> {{doctor?.specialization}}</span>
+        </div>
+
+
+        <div class="drExp">
+            <strong>{{doctor?.expInYrs}}</strong>
+            <p>Years of <br>Experience</p>
+        </div>
+
+        <div class="drExp">
+            <strong>{{doctor?.surgeriesCount}}</strong>
+            <p>Surgeries <br>done</p>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+</div>
+<a (click)="openBookDialog()" class="bookAppLink btn btn-secondary btn-appointment" data-toggle="modal"
+    data-target="#appointment-modal" tabindex="0">Book Appointment</a>

@@ -1,0 +1,39 @@
+<!-- Login Modal -->
+<div class="city-container">
+    <div class="city-header text-center">
+        <h3 class="city-title">Login</h3>
+        <button type="button" class="modal-close" (click)="activeModal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="loginTxt">
+
+        <div class="appointment-body">
+            <form class="appointment-form" [formGroup]="loginForm">
+
+                <div class="form-group animation">
+                    <input type="email" class="form-control" placeholder="Email ID" id="" aria-describedby="emailHelp" formControlName="email" [ngClass]="{'error': hasError('email', 'required')}">
+                    <label for="" class="form-label">Email ID</label>
+                    <div class="FL inError" *ngIf="hasError('email', 'required')">Email is required</div>
+                    <div class="FL inError" *ngIf="hasError('email', 'email')">Enter correct email format</div>
+                    <div class="FL inError" *ngIf="showRegisterMsg">Your Email is not registered</div>
+                </div>
+                <div class="form-group animation">
+                    <a href="javascript:void(0)" class="eyeCross" (click)="showPassword=!showPassword" *ngIf="!showPassword"></a>
+                    <a href="javascript:void(0)" class="eyeCross2" (click)="showPassword=!showPassword" *ngIf="showPassword"></a>
+                    <input type="Password" [attr.type]="showPassword?'text':'password'" class="form-control" [ngClass]="{'error': hasError('password', 'required')}" name="" placeholder="Password" formControlName="password">
+                    <label for="" class="form-label">Password</label>
+                    <div class="FL inError" *ngIf="hasError('password', 'required')">Password is required</div>
+                    <div class="FL inError" *ngIf="showInvalidPwdMsg">Invalid Password or Email</div>
+                    <div class="FL inError" *ngIf="unknownError">{{unknownError}}</div>
+                    <a style="cursor: pointer;" class="FR forgotLink" (click)="openForgotPwd()">Forgot Password</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="action-row">
+                    <button type="submit" class="btn btn-secondary btn-block" (click)="login()" [disabled]="loginForm.invalid">Login</button>
+                    <div class="note">New user <a href="javascript:void(0);" (click)="openSignUP()">Signup</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,108 +1,191 @@
 <header class="surgify-header navbar-light navbar-expand-custom">
-    <div class="surgify-header-inner">
-        <div class="primary-header">
-            <div class="container-header">
-                <div class="primary-header-inner d-flex">
-                    <div class="primary-header-left d-flex">
-                        <a class="hamburger hamburger--squeeze js-hamburger" [ngClass]="{'active': toggleHamburger}"
-                            (click)="toggleMenu()" href="javascript:void(0);">
-                            <div class="hamburger-box">
-                                <div class="hamburger-inner"></div>
-                            </div>
-                        </a>
-                        <div class="logo-wrap">
-                            <a [routerLink]="'/'">
-                                <img src="assets/images/surgify-logo.svg">
-                            </a>
-                        </div>
-                        <nav class="navbar">
-                            <ul class="navbar-nav">
-                                <li [routerLink]="'/'"
-                                    [ngClass]="{'active': ((router?.url?.indexOf('surgery-details')!=-1)|| router?.url=='/')}"
-                                    class="selectedMenu">
-                                    <a href="javascript:void(0);" style="display: none;">Our <strong>Surgeries</strong></a>
-                                </li>
-                                <li [ngClass]="{'active': (router?.url?.indexOf('our-doctors')!=-1)}">
-                                    <a [routerLink]="'/our-doctors'" routerLinkActive="active">Team of 
-                                        <strong>Doctors</strong></a>
-                                </li>
+  <div class="surgify-header-inner">
+    <div class="primary-header">
+      <div class="container-header">
+        <div class="primary-header-inner d-flex">
+          <div class="primary-header-left d-flex">
+            <a
+              class="hamburger hamburger--squeeze js-hamburger"
+              [ngClass]="{ active: toggleHamburger }"
+              (click)="toggleMenu()"
+              href="javascript:void(0);"
+            >
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </a>
+            <div class="logo-wrap">
+              <a [routerLink]="'/'">
+                <img src="assets/images/surgify-logo.svg" />
+              </a>
+            </div>
+            <nav class="navbar">
+              <ul class="navbar-nav">
+                <li
+                  [routerLink]="'/'"
+                  [ngClass]="{
+                    active:
+                      router?.url?.indexOf('surgery-details') != -1 ||
+                      router?.url == '/'
+                  }"
+                  class="selectedMenu"
+                >
+                  <a href="javascript:void(0);" style="display: none"
+                    >Our <strong>Surgeries</strong></a
+                  >
+                </li>
+                <li
+                  [ngClass]="{
+                    active: router?.url?.indexOf('our-doctors') != -1
+                  }"
+                >
+                  <a [routerLink]="'/our-doctors'" routerLinkActive="active"
+                    >Team of <strong>Doctors</strong></a
+                  >
+                </li>
 
-                                <li class="ourPait"  routerLinkActive="active">
-                                    <a href="javascript:void(0);">Our <strong>Patients</strong></a>
-                                    <ul class="outPaiSub">
-                                        <li><a style="cursor: pointer;" (click)="askDoctor()">Ask Doctor</a></li>
-                                        <li><a [routerLink]="'/community'" routerLinkActive="active">Community</a></li>
-                                        <li><a [routerLink]="'/blog'" routerLinkActive="active">Blog</a></li>
-
-                                    </ul>
-                                </li>
-                                <!-- <li routerLinkActive="active">
+                <li class="ourPait" routerLinkActive="active">
+                  <a href="javascript:void(0);"
+                    >Our <strong>Patients</strong></a
+                  >
+                  <ul class="outPaiSub">
+                    <li>
+                      <a style="cursor: pointer" (click)="askDoctor()"
+                        >Ask Doctor</a
+                      >
+                    </li>
+                    <li>
+                      <a [routerLink]="'/community'" routerLinkActive="active"
+                        >Community</a
+                      >
+                    </li>
+                    <li>
+                      <a [routerLink]="'/blog'" routerLinkActive="active"
+                        >Blog</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- <li routerLinkActive="active">
                                     <a [routerLink]="'/our-hospitals'" routerLinkActive="active">Network
                                         <strong>Hospitals</strong></a>
                                 </li> -->
-                                <!-- <li routerLinkActive="active">
+                <!-- <li routerLinkActive="active">
                                     <a [routerLink]="'/simplify-surgery'">Simplifying <strong>Surgeries</strong></a>
                                 </li> -->
-                                <li class="ourPait" routerLinkActive="active">
-                                    <a href="javascript:void(0);">About <strong>Surgify</strong></a>
-                                    <ul class="outPaiSub">
-                                        <li><a [routerLink]="'/about-us'" routerLinkActive="active">About Us</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="primary-header-right d-flex">
-                        <div class="appointment-sticky d-flex">
-                            <a href="tel:8879717532" class="btn btn-cyan-blue btn-call"><i class="icon"><img
-                                        src="assets/images/phoneIcon.svg"></i> 88797 17532</a>
-                            <a href="javascript:void(0);" class="btn btn-outline-secondary btn-appointment"
-                                (click)="openBookAppointment()">Book Appointment</a>
-                        </div>
-                        <a href="javascript:void(0);" class="btn btn-cyan-blue btn-city"
-                            (click)="openCityModal(cityModal)"><i class="icon"><img
-                                    src="assets/images/map-icon.svg"></i> {{(userService?.currentLocation)
-                            ?(userService?.currentLocation?.name): 'City' }}</a>
+                <li class="ourPait" routerLinkActive="active">
+                  <a href="javascript:void(0);"
+                    >About <strong>Surgify</strong></a
+                  >
+                  <ul class="outPaiSub">
+                    <li>
+                      <a [routerLink]="'/about-us'" routerLinkActive="active"
+                        >About Us</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="primary-header-right d-flex">
+            <div class="appointment-sticky d-flex">
+              <a href="tel:74000 74448" class="btn btn-cyan-blue btn-call"
+                ><i class="icon"><img src="assets/images/phoneIcon.svg" /></i>
+                74000 74448</a
+              >
+              <a
+                href="javascript:void(0);"
+                class="btn btn-outline-secondary btn-appointment"
+                (click)="openBookAppointment()"
+                >Book Appointment</a
+              >
+            </div>
+            <a
+              href="javascript:void(0);"
+              class="btn btn-cyan-blue btn-city"
+              (click)="openCityModal(cityModal)"
+              ><i class="icon"><img src="assets/images/map-icon.svg" /></i>
+              {{
+                userService?.currentLocation
+                  ? userService?.currentLocation?.name
+                  : "City"
+              }}</a
+            >
 
-                        <div class="user-login-wrap" *ngIf="!userService?.currentUser" (click)="openLogin()">
-                            <div class="dropdown user-dropdown">
-                                <a class="btn btn-cyan-blue dropdown-toggle" href="javascript:void(0);"
-                                    id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <span class="img-wrap icon">
-                                        <img src="assets/images/userIcon.svg">
-                                    </span>
-                                    <b><img src="assets/images/plus-icon.png"></b>
-                                </a>
-                            </div>
-                        </div>
+            <div
+              class="user-login-wrap"
+              *ngIf="!userService?.currentUser"
+              (click)="openLogin()"
+            >
+              <div class="dropdown user-dropdown">
+                <a
+                  class="btn btn-cyan-blue dropdown-toggle"
+                  href="javascript:void(0);"
+                  id="navbarDropdown"
+                  role="button"
+                  data-display="static"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="img-wrap icon">
+                    <img src="assets/images/userIcon.svg" />
+                  </span>
+                  <b><img src="assets/images/plus-icon.png" /></b>
+                </a>
+              </div>
+            </div>
 
-                        <div class="user-login-wrap" *ngIf="userService?.currentUser">
-                            <div class="dropdown user-dropdown" ngbDropdown>
-                                <a class="btn btn-cyan-blue dropdown-toggle" href="javascript:void(0);"
-                                    id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown"
-                                    aria-expanded="false" ngbDropdownToggle>
-                                    <span class="img-wrap icon">
-                                        <img src="assets/images/userIcon.svg">
-                                    </span>
-                                    <!-- <b *ngIf="!userService?.currentUser"><img src="assets/images/plus-icon.png"></b> -->
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" *ngIf="userService?.currentUser"
-                                    ngbDropdownMenu aria-labelledby="navbarDropdown">
-                                    <ul>
-                                        <li *ngIf="userService?.currentUser">
-                                            <a class="dropdown-item" [routerLink]="'/my-profile'" ngbDropdownItem>My
-                                                Profile</a>
-                                        </li>
-                                        <li *ngIf="userService?.currentUser">
-                                            <a class="dropdown-item" [routerLink]="'/ask-doctor'" ngbDropdownItem>Ask
-                                                Doctors</a>
-                                        </li>
-                                        <li *ngIf="userService?.currentUser">
-                                            <a class="dropdown-item highlight" href="javascript:void(0);"
-                                                ngbDropdownItem (click)="logout()">Logout</a>
-                                        </li>
-                                        <!-- <li *ngIf="!userService?.currentUser">
+            <div class="user-login-wrap" *ngIf="userService?.currentUser">
+              <div class="dropdown user-dropdown" ngbDropdown>
+                <a
+                  class="btn btn-cyan-blue dropdown-toggle"
+                  href="javascript:void(0);"
+                  id="navbarDropdown"
+                  role="button"
+                  data-display="static"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                  ngbDropdownToggle
+                >
+                  <span class="img-wrap icon">
+                    <img src="assets/images/userIcon.svg" />
+                  </span>
+                  <!-- <b *ngIf="!userService?.currentUser"><img src="assets/images/plus-icon.png"></b> -->
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right"
+                  *ngIf="userService?.currentUser"
+                  ngbDropdownMenu
+                  aria-labelledby="navbarDropdown"
+                >
+                  <ul>
+                    <li *ngIf="userService?.currentUser">
+                      <a
+                        class="dropdown-item"
+                        [routerLink]="'/my-profile'"
+                        ngbDropdownItem
+                        >My Profile</a
+                      >
+                    </li>
+                    <li *ngIf="userService?.currentUser">
+                      <a
+                        class="dropdown-item"
+                        [routerLink]="'/ask-doctor'"
+                        ngbDropdownItem
+                        >Ask Doctors</a
+                      >
+                    </li>
+                    <li *ngIf="userService?.currentUser">
+                      <a
+                        class="dropdown-item highlight"
+                        href="javascript:void(0);"
+                        ngbDropdownItem
+                        (click)="logout()"
+                        >Logout</a
+                      >
+                    </li>
+                    <!-- <li *ngIf="!userService?.currentUser">
                                             <a class="dropdown-item highlight" href="javascript:void(0);"
                                                 ngbDropdownItem (click)="openLogin()">Login</a>
                                         </li>
@@ -114,73 +197,122 @@
                                             <a class="dropdown-item highlight" href="javascript:void(0);"
                                                 ngbDropdownItem (click)="openVerify()">Verify Account</a>
                                         </li> -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
+                  </ul>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="secondary-header collapse navbar-collapse " [ngClass]="{'show': toggleHamburger}"
-            id="navbarSupportedContent">
-            <div class="container-header">
-                <nav class="navbar navbar-expand-custom">
-                    <ul class="primary-navbar-nav">
-                        <li class="primary-navbar-item active-page" [ngStyle]="setStyleForDM()">
-                            <div class="primary-navbar-item-inner">
-                                <a routerLinkActive="active" href="javascript:void(0);"
-                                    class="primary-navbar-link primary-navbar-link-dropdown"
-                                    [ngClass]="topMenuClass('our-surgeries')"
-                                    (click)="toggleMenuMobile('our-surgeries')">Our
-                                    <strong>Surgeries</strong></a>
-                                <div class="collapse primary-child-navbar" id="collapse-surgeries"
-                                    [ngClass]="topMenuClass('our-surgeries')">
-                                    <nav class="">
-                                        <ul class="navbar-nav">
-                                            <li class="nav-item dropdown" *ngFor="let speciality of specialities">
-                                                <a href="javascript:void(0);" class="nav-link dropdown-toggle"
-                                                    routerLinkActive="active" role="button"
-                                                    [ngClass]="speciality['open'] ? 'show' : ''"
-                                                    (click)="toggleMenuSubMobile(speciality)"
-                                                    data-toggle="dropdown">{{speciality?.name}}</a>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink"
-                                                    [ngClass]="setStyleByWidth(speciality)">
-                                                    <li *ngFor="let surgery of speciality?.surgeries">
-                                                        <a class="dropdown-item" href="javascript:void(0);"
-                                                            routerLinkActive="active"
-                                                            (click)="hideHamburger(speciality)"
-                                                            [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="primary-navbar-item active-page" *ngFor="let speciality of specialities" [ngStyle]="setStyleForM()">
-                            <div class="primary-navbar-item-inner">
-                                <a routerLinkActive="active" href="javascript:void(0);"
-                                    class="primary-navbar-link primary-navbar-link-dropdown"
-                                    [ngClass]="topMenuClass(speciality?.name)"
-                                    (click)="toggleMenuMobile(speciality?.name)">{{speciality?.name}}
-                                    <!-- <strong>Surgeries</strong> -->
-                                </a>
-                                <div class="collapse primary-child-navbar" id="collapse-surgeries"
-                                    [ngClass]="topMenuClass(speciality?.name)">
-                                    <nav class="">
-                                        <ul class="navbar-nav" [ngClass]="setStyleByWidth(speciality)">
-                                            <li class="nav-item dropdown" *ngFor="let surgery of speciality?.surgeries">
-                                                <a href="javascript:void(0);" class="nav-link"
-                                                    routerLinkActive="active" role="button"
-                                                    
-                                                    (click)="hideHamburger(speciality)"
-                                                    data-toggle="dropdown"
-                                                    [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
-                                                <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink"
+      </div>
+    </div>
+    <div
+      class="secondary-header collapse navbar-collapse"
+      [ngClass]="{ show: toggleHamburger }"
+      id="navbarSupportedContent"
+    >
+      <div class="container-header">
+        <nav class="navbar navbar-expand-custom">
+          <ul class="primary-navbar-nav">
+            <li
+              class="primary-navbar-item active-page"
+              [ngStyle]="setStyleForDM()"
+            >
+              <div class="primary-navbar-item-inner">
+                <a
+                  routerLinkActive="active"
+                  href="javascript:void(0);"
+                  class="primary-navbar-link primary-navbar-link-dropdown"
+                  [ngClass]="topMenuClass('our-surgeries')"
+                  (click)="toggleMenuMobile('our-surgeries')"
+                  >Our <strong>Surgeries</strong></a
+                >
+                <div
+                  class="collapse primary-child-navbar"
+                  id="collapse-surgeries"
+                  [ngClass]="topMenuClass('our-surgeries')"
+                >
+                  <nav class="">
+                    <ul class="navbar-nav">
+                      <li
+                        class="nav-item dropdown"
+                        *ngFor="let speciality of specialities"
+                      >
+                        <a
+                          href="javascript:void(0);"
+                          class="nav-link dropdown-toggle"
+                          routerLinkActive="active"
+                          role="button"
+                          [ngClass]="speciality['open'] ? 'show' : ''"
+                          (click)="toggleMenuSubMobile(speciality)"
+                          data-toggle="dropdown"
+                          >{{ speciality?.name }}</a
+                        >
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuLink"
+                          [ngClass]="setStyleByWidth(speciality)"
+                        >
+                          <li *ngFor="let surgery of speciality?.surgeries">
+                            <a
+                              class="dropdown-item"
+                              href="javascript:void(0);"
+                              routerLinkActive="active"
+                              (click)="hideHamburger(speciality)"
+                              [routerLink]="
+                                '/' + speciality?.slug + '/' + surgery?.slug
+                              "
+                              >{{ surgery?.name }}</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </li>
+            <li
+              class="primary-navbar-item active-page"
+              *ngFor="let speciality of specialities"
+              [ngStyle]="setStyleForM()"
+            >
+              <div class="primary-navbar-item-inner">
+                <a
+                  routerLinkActive="active"
+                  href="javascript:void(0);"
+                  class="primary-navbar-link primary-navbar-link-dropdown"
+                  [ngClass]="topMenuClass(speciality?.name)"
+                  (click)="toggleMenuMobile(speciality?.name)"
+                  >{{ speciality?.name }}
+                  <!-- <strong>Surgeries</strong> -->
+                </a>
+                <div
+                  class="collapse primary-child-navbar"
+                  id="collapse-surgeries"
+                  [ngClass]="topMenuClass(speciality?.name)"
+                >
+                  <nav class="">
+                    <ul
+                      class="navbar-nav"
+                      [ngClass]="setStyleByWidth(speciality)"
+                    >
+                      <li
+                        class="nav-item dropdown"
+                        *ngFor="let surgery of speciality?.surgeries"
+                      >
+                        <a
+                          href="javascript:void(0);"
+                          class="nav-link"
+                          routerLinkActive="active"
+                          role="button"
+                          (click)="hideHamburger(speciality)"
+                          data-toggle="dropdown"
+                          [routerLink]="
+                            '/' + speciality?.slug + '/' + surgery?.slug
+                          "
+                          >{{ surgery?.name }}</a
+                        >
+                        <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink"
                                                     [ngClass]="setStyleByWidth(speciality)">
                                                     <li *ngFor="let surgery of speciality?.surgeries">
                                                         <a class="dropdown-item" href="javascript:void(0);"
@@ -189,20 +321,25 @@
                                                             [routerLink]="'/' + speciality?.slug + '/' + surgery?.slug">{{surgery?.name}}</a>
                                                     </li>
                                                 </ul> -->
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="primary-navbar-item" routerLinkActive="active">
-                            <div class="primary-navbar-item-inner">
-                                <a (click)="toggleMenu()" href="javascript:void(0);" class="primary-navbar-link"
-                                    [routerLink]="'/our-doctors'" routerLinkActive="active">Team of 
-                                    <strong>Doctors</strong></a>
-                            </div>
-                        </li>
-                        <!-- <li class="primary-navbar-item ourPait">
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </li>
+            <li class="primary-navbar-item" routerLinkActive="active">
+              <div class="primary-navbar-item-inner">
+                <a
+                  (click)="toggleMenu()"
+                  href="javascript:void(0);"
+                  class="primary-navbar-link"
+                  [routerLink]="'/our-doctors'"
+                  routerLinkActive="active"
+                  >Team of <strong>Doctors</strong></a
+                >
+              </div>
+            </li>
+            <!-- <li class="primary-navbar-item ourPait">
                             <a href="javascript:void(0);">Our <strong>Patients</strong></a>
                             <ul class="outPaiSub">
                                 <li><a style="cursor: pointer;" (click)="askDoctor()">Ask Doctor</a></li>
@@ -210,87 +347,120 @@
                                 
                             </ul>
                         </li> -->
-                        <li class="primary-navbar-item">
-                            <div class="primary-navbar-item-inner">
-                                <a href="javascript:void(0);" [ngClass]="topMenuClass('our-patients')"
-                                    (click)="toggleMenuMobile('our-patients')"
-                                    class="primary-navbar-link primary-navbar-link-dropdown" data-toggle="collapse"
-                                    data-target="#collapse-Patients" aria-controls="collapse-Patients">Our
-                                    <strong>Patients</strong></a>
-                                <div class="collapse primary-child-navbar" [ngClass]="topMenuClass('our-patients')"
-                                    id="collapse-Patients">
-                                    <nav class="">
-                                        <ul class="navbar-nav mobileSubMenu">
-                                            <li class="nav-item">
-                                                <a style="cursor: pointer;" (click)="askDoctor()">Ask Doctor</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a [routerLink]="'/community'" (click)="toggleMenu()">Community</a>
-                                            </li>
-                                            <li><a [routerLink]="'/blog'" (click)="toggleMenu()">Blog</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="primary-navbar-item">
-                            <div class="primary-navbar-item-inner">
-                                <a href="javascript:void(0);" [ngClass]="topMenuClass('team-surgify')"
-                                    (click)="toggleMenuMobile('team-surgify')"
-                                    class="primary-navbar-link primary-navbar-link-dropdown" data-toggle="collapse"
-                                    data-target="#collapse-team-surgify" aria-controls="collapse-team-surgify">About
-                                    <strong>Surgify</strong></a>
-                                <div class="collapse primary-child-navbar" [ngClass]="topMenuClass('team-surgify')"
-                                    id="collapse-team-surgify">
-                                    <nav class="">
-                                        <ul class="navbar-nav mobileSubMenu">
-                                            <li class="nav-item">
-                                                <a style="cursor: pointer;" [routerLink]="'/about-us'" (click)="toggleMenu()">About Us</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- <li class="primary-navbar-item" routerLinkActive="active">
+            <li class="primary-navbar-item">
+              <div class="primary-navbar-item-inner">
+                <a
+                  href="javascript:void(0);"
+                  [ngClass]="topMenuClass('our-patients')"
+                  (click)="toggleMenuMobile('our-patients')"
+                  class="primary-navbar-link primary-navbar-link-dropdown"
+                  data-toggle="collapse"
+                  data-target="#collapse-Patients"
+                  aria-controls="collapse-Patients"
+                  >Our <strong>Patients</strong></a
+                >
+                <div
+                  class="collapse primary-child-navbar"
+                  [ngClass]="topMenuClass('our-patients')"
+                  id="collapse-Patients"
+                >
+                  <nav class="">
+                    <ul class="navbar-nav mobileSubMenu">
+                      <li class="nav-item">
+                        <a style="cursor: pointer" (click)="askDoctor()"
+                          >Ask Doctor</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a [routerLink]="'/community'" (click)="toggleMenu()"
+                          >Community</a
+                        >
+                      </li>
+                      <li>
+                        <a [routerLink]="'/blog'" (click)="toggleMenu()"
+                          >Blog</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </li>
+            <li class="primary-navbar-item">
+              <div class="primary-navbar-item-inner">
+                <a
+                  href="javascript:void(0);"
+                  [ngClass]="topMenuClass('team-surgify')"
+                  (click)="toggleMenuMobile('team-surgify')"
+                  class="primary-navbar-link primary-navbar-link-dropdown"
+                  data-toggle="collapse"
+                  data-target="#collapse-team-surgify"
+                  aria-controls="collapse-team-surgify"
+                  >About <strong>Surgify</strong></a
+                >
+                <div
+                  class="collapse primary-child-navbar"
+                  [ngClass]="topMenuClass('team-surgify')"
+                  id="collapse-team-surgify"
+                >
+                  <nav class="">
+                    <ul class="navbar-nav mobileSubMenu">
+                      <li class="nav-item">
+                        <a
+                          style="cursor: pointer"
+                          [routerLink]="'/about-us'"
+                          (click)="toggleMenu()"
+                          >About Us</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="primary-navbar-item" routerLinkActive="active">
                             <div class="primary-navbar-item-inner">
                                 <a [routerLink]="'/our-hospitals'" routerLinkActive="active" class="primary-navbar-link"
                                     (click)="toggleMenu()">Network <strong>Hospitals</strong></a>
                             </div>
                         </li> -->
-                        <!-- <li class="primary-navbar-item" routerLinkActive="active">
+            <!-- <li class="primary-navbar-item" routerLinkActive="active">
                             <div class="primary-navbar-item-inner">
                                 <a [routerLink]="'/simplify-surgery'" (click)="toggleMenu()"
                                     class="primary-navbar-link">Simplifying
                                     <strong>Surgeries</strong></a>
                             </div>
                         </li> -->
-                    </ul>
-                </nav>
-            </div>
-        </div>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </div>
 </header>
 
-
 <ng-template let-modal #cityModal>
-    <div class="city-container">
-        <div class="city-header text-center">
-            <h3 class="city-title">Select City</h3>
-            <button type="button" class="modal-close" (click)="modal.dismiss()">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="city-body">
-            <form class="city-form">
-                <ul class="city-list d-flex flex-wrap">
-                    <li class="city-item" *ngFor="let city of cities">
-                        <button href="javascript:void(0);" class="btn btn-block btn-outline-grey"
-                            (click)="onCitySelect(city)" [disabled]="city?.name!='Mumbai'">{{city.name}}</button>
-                    </li>
-
-                </ul>
-            </form>
-        </div>
+  <div class="city-container">
+    <div class="city-header text-center">
+      <h3 class="city-title">Select City</h3>
+      <button type="button" class="modal-close" (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
+    <div class="city-body">
+      <form class="city-form">
+        <ul class="city-list d-flex flex-wrap">
+          <li class="city-item" *ngFor="let city of cities">
+            <button
+              href="javascript:void(0);"
+              class="btn btn-block btn-outline-grey"
+              (click)="onCitySelect(city)"
+              [disabled]="city?.name != 'Mumbai'"
+            >
+              {{ city.name }}
+            </button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
 </ng-template>

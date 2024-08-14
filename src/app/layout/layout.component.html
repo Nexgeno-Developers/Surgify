@@ -1,155 +1,281 @@
 <div class="homepage">
-    <div class="drConFree">
-        Free Doctor Consultation
-      </div>
-    <section class="homeBanner">
-        <ngb-carousel *ngIf="showCar" [showNavigationIndicators]="true" [interval]="5000">
-            <ng-template ngbSlide>
-                <div class="container">
-                    <div class="banner1 d-flex">
-                        <div class="left1 left1New">
-                            <div class="left1-inner">
-                                <h2>Looking for</h2>
-                                <h3>Second Opinion? / Hospitalisation? </h3>
-                                <div class="boxes3Head boxes3Head22">We are committed to care with the best team of doctors , advanced
-                                technology and an affordable healthcare for all !</div>
-
-                                <div class="homepaeTagLinks">
-                                    <a style="cursor: pointer" (click)="openBookDialog('Piles')">Piles</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Fistula')">Fistula</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Fissure')">Fissure</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Pilonidal Sinus')">Pilonidal Sinus</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Varicose Veins')">Varicose Veins</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Varicocele')">Varicocele</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Kidney Stone Treatment')">Kidney Stone Treatment</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Phimosis')">Phimosis</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Hydrocele')">Hydrocele</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Cataract')">Cataract</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('LASIK surgery')">Lasik Surgery</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Hernia Treatment')">Hernia Treatment</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Gallstone Treatment')">Gallstone Treatment</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Appendicitis Treatment ')">Appendicitis Treatment</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Knee Replacement Surgery')">Knee Replacement Surgery</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Gynecomastia (Male Breast Reduction)')">Gynecomastia (Male Breast Reduction)</a>
-                                    <!-- <a style="cursor: pointer" (click)="openBookDialog('Lipoma')">Lipoma</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Bariatric')">Bariatric</a> -->
-                                    <a style="cursor: pointer" (click)="openBookDialog('Arthroscopy')">Arthroscopy</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Breast surgery ')">Breast Surgery</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Hip Replacement Surgery')">Hip Replacement Surgery</a>
-                                    <a style="cursor: pointer" (click)="openBookDialog('Liposuction')">Liposuction</a>
-                                </div>
-
-                                <div class="action-row">
-                                    <a href="javascript:void(0);" class="bookAppLink btn btn-secondary btn-appointment"
-                                        data-toggle="modal" data-target="#appointment-modal"
-                                        (click)="openBookDialog()">Book Appointments</a>
-                                    <a href="javascript:void(0);" class="callIcon btn btn-white btn-call"><i
-                                            class="icon"><img src="assets/images/phoneIcon.svg"></i> 88797 17532</a>
-                                </div>
-                                <div class="action-row action-row-02">
-                                    <a href="javascript:void(0);" class="no-cost-emi btn btn-white" data-toggle="modal"
-                                        data-target="#appointment-modal">
-                                        <span>%</span> No Cost EMI Facility
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right1 right1New">
-                            <div class="bannerImg">
-                                <img src="assets/images/icon2-2.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </ng-template>
-            <ng-template ngbSlide>
-                <div class="container">
-                    <div class="banner1 d-flex">
-                        <div class="left1">
-                            <div class="left1-inner">
-                                <h2 style="white-space: nowrap;">Surgify is one-stop solution for surgeries</h2>
-                                <h3>Complete <span>Surgical Care!!</span></h3>
-                                <!-- <div class="boxes3Head">Surgify is a one-stop solution for surgeries.</div> -->
-                                <ul class="boxes3 d-flex">
-                                    <li class="">
-                                        <span><img src="assets/images/icon1.svg"></span>
-                                        <div class="boxes3Text">Consult specialist doctors for surgery</div>
-                                    </li>
-                                    <li class="">
-                                        <span><img src="assets/images/icon2.svg"></span>
-                                        <div class="boxes3Text">Access to world class hospitals</div>
-                                    </li>
-                                    <li class="">
-                                        <span><img src="assets/images/icon3.svg"></span>
-                                        <div class="boxes3Text">Trustworthy Surgery centers</div>
-                                    </li>
-                                </ul>
-                                <ul class="boxes3-2 d-flex">
-                                    <li class="pr0">
-                                        <span>12,499+</span>
-                                        <div class="boxes3Text">Completed <span>Surgeries</span></div>
-                                    </li>
-                                    <li>
-                                        <span>125</span>
-                                        <div class="boxes3Text">Experienced <span>Surgeons</span></div>
-                                    </li>
-                                    <li>
-                                        <span>75+</span>
-                                        <div class="boxes3Text">Diseases <span></span></div>
-                                    </li>
-
-                                </ul>
-                                <div class="action-row">
-                                    <a href="javascript:void(0);" class="bookAppLink btn btn-secondary btn-appointment"
-                                        data-toggle="modal" data-target="#appointment-modal"
-                                        (click)="openBookDialog()">Book Appointment</a>
-                                    <a href="tel:7039820610" class="callIcon btn btn-white btn-call"><i
-                                            class="icon"><img src="assets/images/phoneIcon.svg"></i> 88797 17532</a>
-                                </div>
-                                <div class="action-row action-row-02">
-                                    <a href="javascript:void(0);" class="no-cost-emi btn btn-white"
-                                        data-toggle="modal" data-target="#appointment-modal"
-                                        >
-                                        <span>%</span> No Cost EMI Facility
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right1">
-                            <div class="bannerImg">
-                                <img src="assets/images/icon2.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </ng-template>
-        </ngb-carousel>
-    </section>
-
-    <!-- Welcome -->
-    <section class="welcome">
+  <div class="drConFree">Free Doctor Consultation</div>
+  <section class="homeBanner">
+    <ngb-carousel
+      *ngIf="showCar"
+      [showNavigationIndicators]="true"
+      [interval]="5000"
+    >
+      <ng-template ngbSlide>
         <div class="container">
-            <div class="welcome-container">
-                <div class="welcome-left welLeft">
-                    <h1>
-                        <span>Surgeries</span>
-                        <strong>We Perform</strong>
-                    </h1>
-                    <!-- <p>The panel of doctors have better experience in the filed of surgery procedures</p> -->
+          <div class="banner1 d-flex">
+            <div class="left1 left1New">
+              <div class="left1-inner">
+                <h2>Looking for</h2>
+                <h3>Second Opinion? / Hospitalisation?</h3>
+                <div class="boxes3Head boxes3Head22">
+                  We are committed to care with the best team of doctors ,
+                  advanced technology and an affordable healthcare for all !
                 </div>
-                <div class="welcome-right text-center" *ngIf="surgeriesPerfomLoading">
-                    <img src="assets/images/loader.gif">
+
+                <div class="homepaeTagLinks">
+                  <a style="cursor: pointer" (click)="openBookDialog('Piles')"
+                    >Piles</a
+                  >
+                  <a style="cursor: pointer" (click)="openBookDialog('Fistula')"
+                    >Fistula</a
+                  >
+                  <a style="cursor: pointer" (click)="openBookDialog('Fissure')"
+                    >Fissure</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Pilonidal Sinus')"
+                    >Pilonidal Sinus</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Varicose Veins')"
+                    >Varicose Veins</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Varicocele')"
+                    >Varicocele</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Kidney Stone Treatment')"
+                    >Kidney Stone Treatment</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Phimosis')"
+                    >Phimosis</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Hydrocele')"
+                    >Hydrocele</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Cataract')"
+                    >Cataract</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('LASIK surgery')"
+                    >Lasik Surgery</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Hernia Treatment')"
+                    >Hernia Treatment</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Gallstone Treatment')"
+                    >Gallstone Treatment</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Appendicitis Treatment ')"
+                    >Appendicitis Treatment</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Knee Replacement Surgery')"
+                    >Knee Replacement Surgery</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="
+                      openBookDialog('Gynecomastia (Male Breast Reduction)')
+                    "
+                    >Gynecomastia (Male Breast Reduction)</a
+                  >
+                  <!-- <a style="cursor: pointer" (click)="openBookDialog('Lipoma')">Lipoma</a>
+                                    <a style="cursor: pointer" (click)="openBookDialog('Bariatric')">Bariatric</a> -->
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Arthroscopy')"
+                    >Arthroscopy</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Breast surgery ')"
+                    >Breast Surgery</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Hip Replacement Surgery')"
+                    >Hip Replacement Surgery</a
+                  >
+                  <a
+                    style="cursor: pointer"
+                    (click)="openBookDialog('Liposuction')"
+                    >Liposuction</a
+                  >
                 </div>
-                <div class="welcome-right welRight" [ngClass]="{'welRight-auto': moreSurgeries}"  *ngIf="!surgeriesPerfomLoading && surgeriesPerfom?.length>0">
-                    <ng-container *ngFor="let surgery of surgeriesPerfom">
-                        <div class="welBox1" (click)="goToDetail(surgery)" style="cursor: pointer;">
-                            <div class="welImg">
-                                <img src="assets/images/{{surgery.imageSM}}">
-                            </div>
-                            <h3>{{surgery?.name}}</h3>
-                        </div>
-                    </ng-container>
-                    <!-- <p-carousel [value]="surgeriesPerfom" [numVisible]="visibleCount" [numScroll]="1"
+
+                <div class="action-row">
+                  <a
+                    href="javascript:void(0);"
+                    class="bookAppLink btn btn-secondary btn-appointment"
+                    data-toggle="modal"
+                    data-target="#appointment-modal"
+                    (click)="openBookDialog()"
+                    >Book Appointments</a
+                  >
+                  <a
+                    href="tel:74000 74448"
+                    class="callIcon btn btn-white btn-call"
+                    ><i class="icon"
+                      ><img src="assets/images/phoneIcon.svg"
+                    /></i>
+                    74000 74448</a
+                  >
+                </div>
+                <div class="action-row action-row-02">
+                  <a
+                    href="javascript:void(0);"
+                    class="no-cost-emi btn btn-white"
+                    data-toggle="modal"
+                    data-target="#appointment-modal"
+                  >
+                    <span>%</span> No Cost EMI Facility
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="right1 right1New">
+              <div class="bannerImg">
+                <img src="assets/images/icon2-2.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="container">
+          <div class="banner1 d-flex">
+            <div class="left1">
+              <div class="left1-inner">
+                <h2 style="white-space: nowrap">
+                  Surgify is one-stop solution for surgeries
+                </h2>
+                <h3>Complete <span>Surgical Care!!</span></h3>
+                <!-- <div class="boxes3Head">Surgify is a one-stop solution for surgeries.</div> -->
+                <ul class="boxes3 d-flex">
+                  <li class="">
+                    <span><img src="assets/images/icon1.svg" /></span>
+                    <div class="boxes3Text">
+                      Consult specialist doctors for surgery
+                    </div>
+                  </li>
+                  <li class="">
+                    <span><img src="assets/images/icon2.svg" /></span>
+                    <div class="boxes3Text">
+                      Access to world class hospitals
+                    </div>
+                  </li>
+                  <li class="">
+                    <span><img src="assets/images/icon3.svg" /></span>
+                    <div class="boxes3Text">Trustworthy Surgery centers</div>
+                  </li>
+                </ul>
+                <ul class="boxes3-2 d-flex">
+                  <li class="pr0">
+                    <span>12,499+</span>
+                    <div class="boxes3Text">
+                      Completed <span>Surgeries</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span>125</span>
+                    <div class="boxes3Text">
+                      Experienced <span>Surgeons</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span>75+</span>
+                    <div class="boxes3Text">Diseases <span></span></div>
+                  </li>
+                </ul>
+                <div class="action-row">
+                  <a
+                    href="javascript:void(0);"
+                    class="bookAppLink btn btn-secondary btn-appointment"
+                    data-toggle="modal"
+                    data-target="#appointment-modal"
+                    (click)="openBookDialog()"
+                    >Book Appointment</a
+                  >
+                  <a
+                    href="tel:74000 74448"
+                    class="callIcon btn btn-white btn-call"
+                    ><i class="icon"
+                      ><img src="assets/images/phoneIcon.svg"
+                    /></i>
+                    74000 74448</a
+                  >
+                </div>
+                <div class="action-row action-row-02">
+                  <a
+                    href="javascript:void(0);"
+                    class="no-cost-emi btn btn-white"
+                    data-toggle="modal"
+                    data-target="#appointment-modal"
+                  >
+                    <span>%</span> No Cost EMI Facility
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="right1">
+              <div class="bannerImg">
+                <img src="assets/images/icon2.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </section>
+
+  <!-- Welcome -->
+  <section class="welcome">
+    <div class="container">
+      <div class="welcome-container">
+        <div class="welcome-left welLeft">
+          <h1>
+            <span>Surgeries</span>
+            <strong>We Perform</strong>
+          </h1>
+          <!-- <p>The panel of doctors have better experience in the filed of surgery procedures</p> -->
+        </div>
+        <div class="welcome-right text-center" *ngIf="surgeriesPerfomLoading">
+          <img src="assets/images/loader.gif" />
+        </div>
+        <div
+          class="welcome-right welRight"
+          [ngClass]="{ 'welRight-auto': moreSurgeries }"
+          *ngIf="!surgeriesPerfomLoading && surgeriesPerfom?.length > 0"
+        >
+          <ng-container *ngFor="let surgery of surgeriesPerfom">
+            <div
+              class="welBox1"
+              (click)="goToDetail(surgery)"
+              style="cursor: pointer"
+            >
+              <div class="welImg">
+                <img src="assets/images/{{ surgery.imageSM }}" />
+              </div>
+              <h3>{{ surgery?.name }}</h3>
+            </div>
+          </ng-container>
+          <!-- <p-carousel [value]="surgeriesPerfom" [numVisible]="visibleCount" [numScroll]="1"
                         [showIndicators]="false" [autoplayInterval]="1000" [circular]="true">
                         <ng-template let-surgery pTemplate="item">
                             <div class="welBox1" (click)="goToDetail(surgery)" style="cursor: pointer;">
@@ -160,141 +286,196 @@
                             </div>
                         </ng-template>
                     </p-carousel> -->
-                </div>
-                <div class="clear"></div>
-                <a  href="javascript:void(0)" class="bookAppLink btn btn-secondary btn-appointment welRight-know-more" (click)="moreSurgeries= !moreSurgeries">{{moreSurgeries?'Show less':'Show more'}}</a>
-                <div class="clear"></div>
-            </div>
         </div>
-    </section>
+        <div class="clear"></div>
+        <a
+          href="javascript:void(0)"
+          class="bookAppLink btn btn-secondary btn-appointment welRight-know-more"
+          (click)="moreSurgeries = !moreSurgeries"
+          >{{ moreSurgeries ? "Show less" : "Show more" }}</a
+        >
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
 
-    <div class="clear"></div>
-    <!-- Surgify -->
-    <section class="whySurgify">
-        <div class="container">
-            <div class="whySurgify-container d-flex">
-                <div class="whySurgify-left welLeft">
-                    <h1>
-                        <span>Why</span>
-                        <strong>Surgify?</strong>
-                    </h1>
-                    <p>We take care of everything from finding a surgeon, booking an appointment with the surgeon,
-                        guiding you through surgery to reaching you back safely home post-surgery.</p>
+  <div class="clear"></div>
+  <!-- Surgify -->
+  <section class="whySurgify">
+    <div class="container">
+      <div class="whySurgify-container d-flex">
+        <div class="whySurgify-left welLeft">
+          <h1>
+            <span>Why</span>
+            <strong>Surgify?</strong>
+          </h1>
+          <p>
+            We take care of everything from finding a surgeon, booking an
+            appointment with the surgeon, guiding you through surgery to
+            reaching you back safely home post-surgery.
+          </p>
 
-                    <a [routerLink]="'/simplify-surgery'" class="whySurgifyBtn btn">
-                        Read more about
-                        <span>How we take care of...</span>
+          <a [routerLink]="'/simplify-surgery'" class="whySurgifyBtn btn">
+            Read more about
+            <span>How we take care of...</span>
+          </a>
+        </div>
+        <div class="whySurgify-right welRight">
+          <div class="whySurgifyimg">
+            <img src="assets/images/whySurgifyimg.png" />
+          </div>
+
+          <ul class="row">
+            <li class="col-md-6">
+              <!-- <h2>Cashless Mediclaim <br>  -->
+              <!-- policy facility</h2> -->
+            </li>
+            <li class="col-md-6">
+              <!-- <h2>Reimbursement <br> -->
+              <!-- policy facility</h2> -->
+            </li>
+          </ul>
+
+          <ul class="wel3Boxes d-flex flex-wrap">
+            <li>
+              <div class="wel3BoxesIn">
+                <span><img src="assets/images/icon4.svg" /> </span>
+                <p>Hospital Admission without any deposit</p>
+              </div>
+            </li>
+            <li>
+              <div class="wel3BoxesIn">
+                <span><img src="assets/images/component-8-2.svg" /> </span>
+                <p>Personal care assistant by surgify team</p>
+              </div>
+            </li>
+            <li>
+              <div class="wel3BoxesIn">
+                <span><img src="assets/images/icon6.svg" /> </span>
+                <p>Hassle free paper work by the team</p>
+              </div>
+            </li>
+            <li>
+              <div class="wel3BoxesIn">
+                <span><img src="assets/images/icon5.svg" /> </span>
+                <p>Comfortable stable stay at the Hospital</p>
+              </div>
+            </li>
+            <li>
+              <div class="wel3BoxesIn">
+                <span><img src="assets/images/icon7.svg" /> </span>
+                <p>Free Pick up and Drop Facility</p>
+              </div>
+            </li>
+            <li>
+              <div class="wel3BoxesIn">
+                <span><img src="assets/images/icon8.svg" /> </span>
+                <p>Hygiene food facility to the patient and the attainder</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonials-container d-flex">
+        <div class="testimonials-left welLeft">
+          <h1>
+            <span>Customers</span>
+            <strong>Successful stories</strong>
+          </h1>
+          <!-- <p>Our past satisfied customers describe about their experience & hospitality with us</p> -->
+          <!-- <a href="javascript:void(0);" class="btn btn-primary">Read More</a> -->
+        </div>
+        <div class="testimonials-right">
+          <div class="testimonial-wrapper">
+            <div class="testimonial-circular">
+              <ul class="testimonial-indicators">
+                <li class="testimonial-circle testimonial-01">
+                  <div
+                    class="testimonial-img img-01"
+                    triggers="manual"
+                    #p="ngbPopover"
+                    (click)="togglePopover(p, 1)"
+                    [ngbPopover]="popContent"
+                    [container]="'body'"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                      class="testimonial-user-toggle"
+                      data-toggle="popover"
+                      id="user-01"
+                    >
+                      <img
+                        src="assets/images/testimonials/testimonialsIcon.svg"
+                      />
                     </a>
-                </div>
-                <div class="whySurgify-right welRight">
-                    <div class="whySurgifyimg">
-                        <img src="assets/images/whySurgifyimg.png">
-                    </div>
-
-                    <ul class="row">
-                        <li class="col-md-6">
-                            <!-- <h2>Cashless Mediclaim <br>  -->
-                                <!-- policy facility</h2> -->
-                        </li>
-                        <li class="col-md-6">
-                            <!-- <h2>Reimbursement <br> -->
-                                <!-- policy facility</h2> -->
-                        </li>
-                    </ul>
-
-                    <ul class="wel3Boxes d-flex flex-wrap">
-                        <li>
-                            <div class="wel3BoxesIn">
-                                <span><img src="assets/images/icon4.svg"> </span>
-                                <p>Hospital Admission without any deposit</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wel3BoxesIn">
-                                <span><img src="assets/images/component-8-2.svg"> </span>
-                                <p>Personal care assistant by surgify team</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wel3BoxesIn">
-                                <span><img src="assets/images/icon6.svg"> </span>
-                                <p>Hassle free paper work by the team</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wel3BoxesIn">
-                                <span><img src="assets/images/icon5.svg"> </span>
-                                <p>Comfortable stable stay at the Hospital</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wel3BoxesIn">
-                                <span><img src="assets/images/icon7.svg"> </span>
-                                <p>Free Pick up and Drop Facility</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wel3BoxesIn">
-                                <span><img src="assets/images/icon8.svg"> </span>
-                                <p>Hygiene food facility to the patient and the attainder</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="testimonials-container d-flex">
-                <div class="testimonials-left welLeft">
-                    <h1>
-                        <span>Customers</span>
-                        <strong>Successful stories</strong>
-                    </h1>
-                    <!-- <p>Our past satisfied customers describe about their experience & hospitality with us</p> -->
-                    <!-- <a href="javascript:void(0);" class="btn btn-primary">Read More</a> -->
-                </div>
-                <div class="testimonials-right">
-                    <div class="testimonial-wrapper">
-
-                        <div class="testimonial-circular">
-                            <ul class="testimonial-indicators">
-                                <li class="testimonial-circle testimonial-01">
-                                    <div class="testimonial-img img-01" triggers="manual" #p="ngbPopover"
-                                        (click)="togglePopover(p, 1)" [ngbPopover]="popContent" [container]="'body'">
-                                        <a href="javascript:void(0);" class="testimonial-user-toggle"
-                                            data-toggle="popover" id="user-01">
-                                            <img src="assets/images/testimonials/testimonialsIcon.svg">
-                                        </a>
-                                    </div>
-                                    <div class="testimonial-img img-02" triggers="manual" #p1="ngbPopover"
-                                        (click)="togglePopover(p1, 2)" [ngbPopover]="popContent" [container]="'body'">
-                                        <a href="javascript:void(0);" class="testimonial-user-toggle"
-                                            data-toggle="popover" id="user-02">
-                                            <img src="assets/images/testimonials/testimonialsIcon.svg">
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="testimonial-circle testimonial-02">
-                                    <div class="testimonial-img img-01" triggers="manual" #p2="ngbPopover"
-                                        (click)="togglePopover(p2, 3)" [ngbPopover]="popContent" [container]="'body'">
-                                        <a href="javascript:void(0);" class="testimonial-user-toggle"
-                                            data-toggle="popover" id="user-03">
-                                            <img src="assets/images/testimonials/testimonialsIcon.svg">
-                                        </a>
-                                    </div>
-                                    <div class="testimonial-img img-02" triggers="manual" #p3="ngbPopover"
-                                        (click)="togglePopover(p3, 4)" [ngbPopover]="popContent" [container]="'body'">
-                                        <a href="javascript:void(0);" class="testimonial-user-toggle"
-                                            data-toggle="popover" id="user-04">
-                                            <img src="assets/images/testimonials/testimonialsIcon.svg">
-                                        </a>
-                                    </div>
-                                </li>
-                                <!-- <li class="testimonial-circle testimonial-03">
+                  </div>
+                  <div
+                    class="testimonial-img img-02"
+                    triggers="manual"
+                    #p1="ngbPopover"
+                    (click)="togglePopover(p1, 2)"
+                    [ngbPopover]="popContent"
+                    [container]="'body'"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                      class="testimonial-user-toggle"
+                      data-toggle="popover"
+                      id="user-02"
+                    >
+                      <img
+                        src="assets/images/testimonials/testimonialsIcon.svg"
+                      />
+                    </a>
+                  </div>
+                </li>
+                <li class="testimonial-circle testimonial-02">
+                  <div
+                    class="testimonial-img img-01"
+                    triggers="manual"
+                    #p2="ngbPopover"
+                    (click)="togglePopover(p2, 3)"
+                    [ngbPopover]="popContent"
+                    [container]="'body'"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                      class="testimonial-user-toggle"
+                      data-toggle="popover"
+                      id="user-03"
+                    >
+                      <img
+                        src="assets/images/testimonials/testimonialsIcon.svg"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    class="testimonial-img img-02"
+                    triggers="manual"
+                    #p3="ngbPopover"
+                    (click)="togglePopover(p3, 4)"
+                    [ngbPopover]="popContent"
+                    [container]="'body'"
+                  >
+                    <a
+                      href="javascript:void(0);"
+                      class="testimonial-user-toggle"
+                      data-toggle="popover"
+                      id="user-04"
+                    >
+                      <img
+                        src="assets/images/testimonials/testimonialsIcon.svg"
+                      />
+                    </a>
+                  </div>
+                </li>
+                <!-- <li class="testimonial-circle testimonial-03">
                                     <div class="testimonial-img img-01" triggers="manual" #p4="ngbPopover"
                                         (click)="togglePopover(p4, 5)" [ngbPopover]="popContent" [container]="'body'">
                                         <a href="javascript:void(0);" class="testimonial-user-toggle"
@@ -310,13 +491,13 @@
                                         </a>
                                     </div>
                                 </li> -->
-                                <li class="testimonial-circle rounded-center">
-                                    <img src="assets/images/heart.svg">
-                                </li>
-                            </ul>
-                        </div>
+                <li class="testimonial-circle rounded-center">
+                  <img src="assets/images/heart.svg" />
+                </li>
+              </ul>
+            </div>
 
-                        <!-- <div id="testimonial-user-01" class="testimnonail-user-content">
+            <!-- <div id="testimonial-user-01" class="testimnonail-user-content">
                             <div class="testimonial-popover-inner d-flex">
                                 <div class="testimonial-left">
                                     <img src="assets/images/quote.svg">
@@ -424,70 +605,73 @@
                                 </div>
                             </div>
                         </div> -->
-
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="welRight">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="welRight">
          
         </div> -->
-        </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Videos -->
-    <section class="section-videos section">
-        <div class="container">
-            <div class="video-box-section">
-                <div class="video-boxes d-flex">
-                    <div class="box">
-                        <a [routerLink]="'/community'">
-                            <div class="box-inner d-flex">
-                                <div class="box-icon">
-                                    <img src="assets/images/icons/community-icon.svg">
-                                </div>
-                                <div class="box-content">
-                                    <div class="title-row d-flex">
-                                        <div class="title-left welLeft">
-                                            <h1>
-                                                <span>For Patients</span>
-                                                <strong>Community</strong>
-                                            </h1>
-                                        </div>
-                                        <div class="title-right d-flex">
-                                            <img src="assets/images/arrow-right.svg">
-                                        </div>
-                                    </div>
-                                    <p>Patients can ask questions to Doctors & previous answers given by an expert
-                                        doctors in the filed of surgery</p>
-                                </div>
-                            </div>
-                        </a>
+  <!-- Videos -->
+  <section class="section-videos section">
+    <div class="container">
+      <div class="video-box-section">
+        <div class="video-boxes d-flex">
+          <div class="box">
+            <a [routerLink]="'/community'">
+              <div class="box-inner d-flex">
+                <div class="box-icon">
+                  <img src="assets/images/icons/community-icon.svg" />
+                </div>
+                <div class="box-content">
+                  <div class="title-row d-flex">
+                    <div class="title-left welLeft">
+                      <h1>
+                        <span>For Patients</span>
+                        <strong>Community</strong>
+                      </h1>
                     </div>
-                    <div class="box">
-                        <a [routerLink]="'/our-doctors'">
-                            <div class="box-inner d-flex">
-                                <div class="box-icon">
-                                    <img src="assets/images/icons/doctors-icon.svg">
-                                </div>
-                                <div class="box-content">
-                                    <div class="title-row d-flex">
-                                        <div class="title-left welLeft">
-                                            <h1>
-                                                <span>Our Pannel</span>
-                                                <strong>Doctors</strong>
-                                            </h1>
-                                        </div>
-                                        <div class="title-right d-flex">
-                                            <img src="assets/images/arrow-right.svg">
-                                        </div>
-                                    </div>
-                                    <p>Searching for doctors nearby?<br>Find top online doctors near you on Surgify!!
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="title-right d-flex">
+                      <img src="assets/images/arrow-right.svg" />
                     </div>
-                    <!-- <div class="box">
+                  </div>
+                  <p>
+                    Patients can ask questions to Doctors & previous answers
+                    given by an expert doctors in the filed of surgery
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="box">
+            <a [routerLink]="'/our-doctors'">
+              <div class="box-inner d-flex">
+                <div class="box-icon">
+                  <img src="assets/images/icons/doctors-icon.svg" />
+                </div>
+                <div class="box-content">
+                  <div class="title-row d-flex">
+                    <div class="title-left welLeft">
+                      <h1>
+                        <span>Our Pannel</span>
+                        <strong>Doctors</strong>
+                      </h1>
+                    </div>
+                    <div class="title-right d-flex">
+                      <img src="assets/images/arrow-right.svg" />
+                    </div>
+                  </div>
+                  <p>
+                    Searching for doctors nearby?<br />Find top online doctors
+                    near you on Surgify!!
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- <div class="box">
                         <a [routerLink]="'/our-hospitals'">
                             <div class="box-inner d-flex">
                                 <div class="box-icon">
@@ -511,57 +695,72 @@
                             </div>
                         </a>
                     </div> -->
-                </div>
-            </div>
+        </div>
+      </div>
 
-            <div class="video-grids-section">
-                <div class="video-grids-header welLeft">
-                    <h1>
-                        <span>For Patients</span>
-                        <strong>Videos</strong>
-                    </h1>
-                </div>
+      <div class="video-grids-section">
+        <div class="video-grids-header welLeft">
+          <h1>
+            <span>For Patients</span>
+            <strong>Videos</strong>
+          </h1>
+        </div>
 
-                <div class="video-grids d-flex">
-                    <div class="video-left">
-                        <div class="video-list large d-flex lg">
-                            <div class="video-img">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <!-- <iframe class="embed-responsive-item" [src]="(youtubeVideos[0])"
+        <div class="video-grids d-flex">
+          <div class="video-left">
+            <div class="video-list large d-flex lg">
+              <div class="video-img">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <!-- <iframe class="embed-responsive-item" [src]="(youtubeVideos[0])"
                                         allowfullscreen></iframe> -->
 
-                                    <youtube-player [videoId]="youtubeVideos[0]?.url" [height]="450" [width]="780">
-                                    </youtube-player>
-                                </div>
-                            </div>
-                            <div class="video-desc">
-                                <h3>Anterior Cruciate Ligament Treatment</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="video-right">
-                        <ul class="video-list">
-                            <ng-container *ngFor="let video of youtubeVideos; let i=index">                            
-                            <li *ngIf="i>0">
-                                    <div class="video-list-wrap d-flex" (click)="openVideo(video?.url, youtubeModal)"
-                                        style="cursor: pointer;">
-                                        <div class="video-img">
-                                            <a href="javascript:void(0);">
-                                                <img src="http://img.youtube.com/vi/{{video.url}}/default.jpg">
-                                                <!-- <iframe class="embed-responsive-item" [src]="youtubeVideos[i]"
+                  <youtube-player
+                    [videoId]="youtubeVideos[0]?.url"
+                    [height]="450"
+                    [width]="780"
+                  >
+                  </youtube-player>
+                </div>
+              </div>
+              <div class="video-desc">
+                <h3>Anterior Cruciate Ligament Treatment</h3>
+              </div>
+            </div>
+          </div>
+          <div class="video-right">
+            <ul class="video-list">
+              <ng-container *ngFor="let video of youtubeVideos; let i = index">
+                <li *ngIf="i > 0">
+                  <div
+                    class="video-list-wrap d-flex"
+                    (click)="openVideo(video?.url, youtubeModal)"
+                    style="cursor: pointer"
+                  >
+                    <div class="video-img">
+                      <a href="javascript:void(0);">
+                        <img
+                          src="http://img.youtube.com/vi/{{
+                            video.url
+                          }}/default.jpg"
+                        />
+                        <!-- <iframe class="embed-responsive-item" [src]="youtubeVideos[i]"
                                                     allowfullscreen></iframe> -->
-                                                <!-- <youtube-player [videoId]="video" [height]="100" [width]="140">
+                        <!-- <youtube-player [videoId]="video" [height]="100" [width]="140">
                                                 </youtube-player> -->
-                                            </a>
-                                        </div>
-                                        <div class="video-desc">
-                                            <h3><a href="javascript:void(0);">{{video?.description}}</a></h3>
-                                        </div>
-                                    </div>
-                            </li>
-                        </ng-container>
+                      </a>
+                    </div>
+                    <div class="video-desc">
+                      <h3>
+                        <a href="javascript:void(0);">{{
+                          video?.description
+                        }}</a>
+                      </h3>
+                    </div>
+                  </div>
+                </li>
+              </ng-container>
 
-                            <!-- <li>
+              <!-- <li>
                                 <div class="video-list-wrap d-flex">
                                     <div class="video-img">
                                         <a href="javascript:void(0);">
@@ -587,57 +786,84 @@
                                     </div>
                                 </div>
                             </li> -->
-                        </ul>
-                    </div>
-                </div>
-
-
-            </div>
-
-
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter-section section">
-        <div class="container">
-            <div class="newsletter-container d-flex">
-                <div class="newsletter-left">
-                    <img src="assets/images/newsletter-heart.svg" />
-                </div>
-                <div class="newsletter-right">
-                    <div class="newsletter-form-container">
-                        <h3>Get a free Video Consultation</h3>
-                        <h5>Please provide your Name & Phone number, get your free appointment.</h5>
-                        <form class="newsletter-form d-flex" [formGroup]="videoReqForm">
-                            <div class="form-col">
-                                <input type="text" class="form-control" id="" placeholder="Name"
-                                    formControlName="patientName">
-                                <div class="FL inError" *ngIf="hasError('patientName', 'required')">Patient Name is
-                                    mandatory</div>
-                            </div>
-                            <div class="form-col">
-                                <input type="text" class="form-control" id="" placeholder="Mobile No."
-                                    formControlName="mobileNo" pattern="^[0-9]{10}$" maxlength="10">
-                                <div class="FL inError" *ngIf="hasError('mobileNo', 'required')">Mobile No is
-                                    mandatory</div>
-                                <div class="FL inError" *ngIf="hasError('mobileNo', 'pattern')">Invalid Mobile No</div>
-                            </div>
-                            <div class="form-btn">
-                                <button type="submit" class="btn btn-secondary" (click)="submitVideReq()"
-                                    [disabled]="(!videoReqForm.touched || !videoReqForm.valid) ? 'true': null">Request
-                                    Call
-                                    Back</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  <!-- Newsletter -->
+  <section class="newsletter-section section">
+    <div class="container">
+      <div class="newsletter-container d-flex">
+        <div class="newsletter-left">
+          <img src="assets/images/newsletter-heart.svg" />
         </div>
-    </section>
+        <div class="newsletter-right">
+          <div class="newsletter-form-container">
+            <h3>Get a free Video Consultation</h3>
+            <h5>
+              Please provide your Name & Phone number, get your free
+              appointment.
+            </h5>
+            <form class="newsletter-form d-flex" [formGroup]="videoReqForm">
+              <div class="form-col">
+                <input
+                  type="text"
+                  class="form-control"
+                  id=""
+                  placeholder="Name"
+                  formControlName="patientName"
+                />
+                <div
+                  class="FL inError"
+                  *ngIf="hasError('patientName', 'required')"
+                >
+                  Patient Name is mandatory
+                </div>
+              </div>
+              <div class="form-col">
+                <input
+                  type="text"
+                  class="form-control"
+                  id=""
+                  placeholder="Mobile No."
+                  formControlName="mobileNo"
+                  pattern="^[0-9]{10}$"
+                  maxlength="10"
+                />
+                <div
+                  class="FL inError"
+                  *ngIf="hasError('mobileNo', 'required')"
+                >
+                  Mobile No is mandatory
+                </div>
+                <div class="FL inError" *ngIf="hasError('mobileNo', 'pattern')">
+                  Invalid Mobile No
+                </div>
+              </div>
+              <div class="form-btn">
+                <button
+                  type="submit"
+                  class="btn btn-secondary"
+                  (click)="submitVideReq()"
+                  [disabled]="
+                    !videoReqForm.touched || !videoReqForm.valid ? 'true' : null
+                  "
+                >
+                  Request Call Back
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Blog -->
-    <!-- <section class="section-blog section">
+  <!-- Blog -->
+  <!-- <section class="section-blog section">
         <div class="container">
             <div class="blog-container d-flex">
                 <div class="blog-left welLeft">
@@ -702,8 +928,8 @@
         </div>
     </section> -->
 
-    <!-- Blog -->
-    <!-- <section class="section-surgify-app section">
+  <!-- Blog -->
+  <!-- <section class="section-surgify-app section">
         <div class="container">
             <div class="app-container d-flex">
                 <div class="app-left">
@@ -727,8 +953,8 @@
         </div>
     </section> -->
 
-    <!-- Network -->
-    <!-- <section class="section-network section">
+  <!-- Network -->
+  <!-- <section class="section-network section">
         <div class="network-header">
             <div class="network-divider"><span class="divider-title">Our <span>Net Work</span> Hospitals</span></div>
         </div>
@@ -744,48 +970,47 @@
             </div>
         </div>
     </section> -->
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
+  <br /><br />
+  <br /><br />
+  <br /><br />
+  <br /><br />
 </div>
 
 <ng-template #popContent let-data="data">
-    <div class="testimnonail-user-content">
-        <div class="testimonial-popover d-flex">
-            <div class="testimonial-left">
-                <img src="assets/images/quote.svg">
-            </div>
-            <div class="testimonial-right">
-                <div class="author-desc">
-                    {{data?.text}}
-                </div>
-                <div class="author-info">
-                    <div class="author-info-inner">
-                        <div class="author-name">{{data?.name}}</div>
-                        <!-- <div class="author-loc">{{data?.location}}</div> -->
-                    </div>
-                </div>
-            </div>
+  <div class="testimnonail-user-content">
+    <div class="testimonial-popover d-flex">
+      <div class="testimonial-left">
+        <img src="assets/images/quote.svg" />
+      </div>
+      <div class="testimonial-right">
+        <div class="author-desc">
+          {{ data?.text }}
         </div>
+        <div class="author-info">
+          <div class="author-info-inner">
+            <div class="author-name">{{ data?.name }}</div>
+            <!-- <div class="author-loc">{{data?.location}}</div> -->
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </ng-template>
 
 <ng-template let-modal #youtubeModal>
-    <!-- Login Modal -->
-    <div class="city-container" id="videoP">
-        <div class="city-header text-center">
-            <!-- <h3 class="city-title">Login</h3> -->
-            <button type="button" class="modal-close" (click)="modal.dismiss()">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="loginTxt">
-
-            <div class="appointment-body youTubeContainer">
-                <youtube-player [videoId]="currentVideo" class="ngVideo">
-                </youtube-player>
-            </div>
-        </div>
+  <!-- Login Modal -->
+  <div class="city-container" id="videoP">
+    <div class="city-header text-center">
+      <!-- <h3 class="city-title">Login</h3> -->
+      <button type="button" class="modal-close" (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
+    <div class="loginTxt">
+      <div class="appointment-body youTubeContainer">
+        <youtube-player [videoId]="currentVideo" class="ngVideo">
+        </youtube-player>
+      </div>
+    </div>
+  </div>
 </ng-template>
